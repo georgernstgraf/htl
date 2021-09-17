@@ -1,29 +1,18 @@
 # LERNERGEBNISSE DES PFLICHTGEGENSTANDES ANGEWANDTE INFORMATIK 
 
-Die Lernergebnisse der „Angewandten Informatik“ versetzen die Absolventinnen
-und Absolventen in die Lage, moderne Informationstechnologien sicher und kom-
-petent im beruflichen Alltag anzuwenden und an den technologischen Entwick-
-lungen einer modernen vernetzen Gesellschaft teilzuhaben.
+Die Lernergebnisse der „Angewandten Informatik“ versetzen die Absolventinnen und Absolventen in die Lage, moderne Informationstechnologien sicher und kompetent im beruflichen Alltag anzuwenden und an den technologischen Entwicklungen einer modernen vernetzen Gesellschaft teilzuhaben.
 
-Im Bereich **Informatiksysteme, Mensch und Gesellschaft** kennen Absol-
-ventinnen und Absolventen die gesellschaftlichen Auswirkungen von Information-
-stechnologien und können zu aktuellen IT-Themen kritisch Stellung nehmen. Sie
-können Kaufentscheidungen für gängige PC-Hardware treffen, Betriebssysteme
-konfigurieren, Standardsoftware installieren und Netzwerkressourcen nutzen
-sowie gesetzliche Rahmenbedingungen und Datensicherheit berücksichtigen.
+Im Bereich **Informatiksysteme, Mensch und Gesellschaft** kennen Absolventinnen und Absolventen die gesellschaftlichen Auswirkungen von Informationstechnologien und können zu aktuellen IT-Themen kritisch Stellung nehmen. Sie können Kaufentscheidungen für gängige PC-Hardware treffen, Betriebssysteme konfigurieren, Standardsoftware installieren und Netzwerkressourcen nutzen sowie gesetzliche Rahmenbedingungen und Datensicherheit berücksichtigen.
 
-Im Bereich **Publikation und Kommunikation** können Absolventinnen und Absol-
-venten Dokumente unterschiedlicher Formate on- und offline nutzen, erstellen
-und publizieren sowie das Internet nutzen und über das Netz kommunizieren.
+Im Bereich **Publikation und Kommunikation** können Absolventinnen und Absolventen Dokumente unterschiedlicher Formate on- und offline nutzen, erstellen und publizieren sowie das Internet nutzen und über das Netz kommunizieren.  
 
-Im Bereich **Tabellenkalkulation** können Absolventinnen und Absolventen in
-Tabellenkalkulationen mit geeigneten Funktionen Berechnungen durchführen, Dia-
-gramme erstellen und Datenbestände auswerten.
-
+Im Bereich **Tabellenkalkulation** können Absolventinnen und Absolventen in Tabellenkalkulationen mit geeigneten Funktionen Berechnungen durchführen, Diagramme erstellen und Datenbestände auswerten.  
 
 # ANGEWANDTE INFORMATIK 
 
-## Kompetenzmodul 1: Bildungs- und Lehraufgabe: Die Studierenden können im 
+## Kompetenzmodul 1:
+
+### Bildungs- und Lehraufgabe: Die Studierenden können im 
 
 ## Bereich Informatiksysteme, Mensch und Gesellschaft 
 
