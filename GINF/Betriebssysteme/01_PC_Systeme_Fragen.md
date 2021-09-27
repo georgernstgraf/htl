@@ -1,0 +1,15 @@
+# Fragen zu PC-Systemen
+- Ein Handyvertrag beinhaltet ein Datenvolumen von 5GB/Monat. Wie lange kann man Filme mit einer durchschnittlichen Bitrate von 450kbit/sec ansehen, bis das Datenvolumen aufgebraucht ist? 
+- Sie möchten einer Freundin einen Film der Größe von 4.2GB (Gigabyte) über ein service wie z.b. wetransfer bereitstellen. Sie verwenden dazu eine Internetleitung mit einem Durchsatz von 8mbit/sec. Wie lange wird Ihr Upload etwa dauern?
+- Nennen Sie die gängige Tausender-Potenzen, welche in der IT verwendet werden. (Also Kilo, usw.)
+- Nennen Sie die passenden Worte zu den SI-Werten K, M, G, T, P, E, Z, Y
+- Erklären Sie in eigenen Worten den Unterschied zwischen Dezimalpräfixen und Binärpräfixen (Kilo, Mega, ... vs. KiBi, Mebi, Gibi, ...)
+- Warum sind das hexadezimal- und das binärsystem miteinander verwandt?
+- Benennen Sie die Schnittstellen für Peripheriegeräte an Ihrem oder einem anderen PC.
+- Zählen Sie einige Leitungssysteme auf, welche in PCs verwendet werden.
+- Datenübertragungsrate: Welche Einheit? Einheit Baud bzw. bits/sec 
+- erklären Sie die Begriffe Bandbreite, Steuerdaten, Datendurchsatz, Kanalkapazität, Nutzdaten, Latenzzeit, Overhead
+- zählen Sie einige Ihnen bekannte Videoschnittstellen an einem PC auf (2-3 Stück)
+- Erklären Sie in eigenen Worten, was ein Peripheriegerät ist.
+- Erklären Sie, warum die Klassifizierung eines Gerätes als Peripheriegerät uneindeutig sein kann.
+- Zählen Sie einige im Unterricht erwähnte Datenausgabegeräte auf.

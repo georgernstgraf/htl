@@ -7,9 +7,9 @@
 ### RAM, Memory
 - Historie, Werte (SI-Einheiten) GB vs. GiB (Tip: Mathematiker sind stur).
 - Einheiten: K M G T P E Z Y (Kilo Mega Giga Tera Peta Exa Zeta Yota)
+- Dezimal, Binär, Hexadeximalsysteme
 - C64: 64Kibibyte RAM
 - DNA: 3 Mrd. (Giga) Basenpaare (2 bit) = 6Gbit < 1GB (passt auf jeden stick)
-- Dezimal, Binär, Hexadezimal
 - Entwicklernotebooks (~32GB)
 - Rackserver (dzt. +4TB)
 - Speicherzugriff, Busse, Geschwindigkeiten
