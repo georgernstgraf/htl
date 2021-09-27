@@ -1,6 +1,6 @@
 # Fragen zu PC-Systemen
 - Ein Handyvertrag beinhaltet ein Datenvolumen von 5GB/Monat. Wie lange kann man Filme mit einer durchschnittlichen Bitrate von 450kbit/sec ansehen, bis das Datenvolumen aufgebraucht ist? 
-- Sie möchten einer Freundin einen Film der Größe von 4.2GB (Gigabyte) über ein service wie z.b. wetransfer bereitstellen. Sie verwenden dazu eine Internetleitung mit einem Durchsatz von 8mbit/sec. Wie lange wird Ihr Upload etwa dauern?
+- Sie möchten einer Freundin einen Film der Größe von 4.2GB (Gigabyte) über ein service wie z.b. wetransfer bereitstellen. Sie verwenden dazu eine Internetleitung mit einem Durchsatz von 8Mbit/sec. Wie lange wird Ihr Upload etwa dauern?
 - Nennen Sie die gängige Tausender-Potenzen, welche in der IT verwendet werden. (Also Kilo, usw.)
 - Nennen Sie die passenden Worte zu den SI-Werten K, M, G, T, P, E, Z, Y
 - Erklären Sie in eigenen Worten den Unterschied zwischen Dezimalpräfixen und Binärpräfixen (Kilo, Mega, ... vs. KiBi, Mebi, Gibi, ...)
@@ -12,4 +12,4 @@
 - zählen Sie einige Ihnen bekannte Videoschnittstellen an einem PC auf (2-3 Stück)
 - Erklären Sie in eigenen Worten, was ein Peripheriegerät ist.
 - Erklären Sie, warum die Klassifizierung eines Gerätes als Peripheriegerät uneindeutig sein kann.
-- Zählen Sie einige im Unterricht erwähnte Datenausgabegeräte auf.
+- Zählen Sie einige im Unterricht erwähnte (Daten-)ausgabegeräte auf.
