@@ -13,8 +13,16 @@
 - HAL (Hardware abstraction Layer)
 
 # Aufgaben eines OS
-## 1. HAL: **abstrahiert** (daher der Name) von den jeweiligen Besonderheiten von Hardware
+### 1. HAL: **abstrahiert** (daher der Name) von den jeweiligen Besonderheiten von Hardware
 
-Beispiel: Dateizugriff
-  - Für ein Software-Programm (zB. Word) schaut Laufwerk D: immer gleich aus, egal ob D: ein USB-Stick oder eine Festplatte ist.
+Beispiel: Dateizugriff: Für ein Software-Programm (zB. Word) schaut Laufwerk D: immer gleich aus, egal ob D: ein USB-Stick oder eine Festplatte ist.
 
+### 2. Sicherheit
+
+Das OS ermöglicht für Prozesse einen "geschützten Raum", in welchem dieser ausgeführt wird. Andere Prozesse haben
+normalerweise weder Lese- noch Schreibzugriff auf den RAM-Bereich von anderen Prozessen.
+
+### 3. Scheduling
+
+- [https://de.wikipedia.org/wiki/Prozess-Scheduler](https://de.wikipedia.org/wiki/Prozess-Scheduler)
+- Priorisierung (niedrig z.B. bitcoin-mining) (hoch: Echtzeitaufgaben, Spiele mit niedriger Antwortzeit etc.)
