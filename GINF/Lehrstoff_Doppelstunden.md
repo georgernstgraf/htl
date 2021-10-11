@@ -1,7 +1,7 @@
 # Betriebssysteme
-- PC-Systeme (Kernkomponenten, Peripheriekomponenten)
-- Virtualisierung (Hypervisoren)
-- Betriebssystemsoftware (Lizenzmodelle, Betriebssystemfamilien)
+- [PC-Systeme](Betriebssysteme/01_PC_Systeme.md) (Kernkomponenten, Peripheriekomponenten)
+- [Virtualisierung](Betriebssysteme/02_Virtualisierung.md) (Hypervisoren)
+- [Betriebssystemsoftware](Betriebssysteme/03_OS-Software.md) (Lizenzmodelle, Betriebssystemfamilien)
 - Betriebssystemaufbau (HAL, Kernel, Treiber, Dienste, Softwaremanagement)
 - Benutzerschnittstellen (Cursoren, Shells)
 - Dateiverwaltung (Dateioperationen, Metadaten)
