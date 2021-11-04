@@ -1,0 +1,39 @@
+# Word
+- Alternative: Libreoffice
+- Seitenlayout
+  - Ränder
+  - Papiergröße
+- Tastaturkürzel
+  - Websuche: "Keyboard shortcuts in Word"
+  - ctrl-a (ctrl = strg = "Control" = "Steuerung")
+  - ctrl-c /-v /-x (c: copy, v: einfügen, x: löschen)
+  - Seitenumbruch (ctrl-enter)
+  - Zeilenumbruch innerhalb eines Absatzes (shift-enter)
+  - speichern ctrl-s
+- Fonts
+  - Was sind Serifen?
+    - dienen der Lesbarkeit
+  - Monospaced / Proportional
+  - condensed / semicondensed
+  - **bold / semibold ( = fett / halbfett)**
+  - light (dünn)
+  - *italic (kursiv)*
+  - unter- und durchgestrichen
+  - Google Noto Fonts (No Tofu!) □
+- Absatzformatierung
+  - links- und rechtsbündig
+  - Blocksatz
+  - Flattersatz
+- Spezialfunktionen
+  - Inhaltsverzeichnis
+  - Literaturverzeichnis
+  - suchen / ersetzen (ctrl-g)
+  - Serienbriefe
+    - Daten können von Tabelle aus Word oder Excel kommen
+- Dateiformate
+  - .docx (standard word)
+  - .dotx (word-Vorlage)
+  - .pdf
+    - "Portable Document Format"
+    - "Goldstandard" zum Dokumentenversand im Internet
+    - zum Versenden per Email an Empfänger die evtl. kein MS Office haben
