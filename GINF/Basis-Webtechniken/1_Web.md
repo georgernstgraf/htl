@@ -16,12 +16,23 @@
 
 ## Über Tags:
 
-- Tags umschließen anderen Inhalt, wie <html> ... </html>
-- opening und closing
-- Einige wenige Tags sind Standalone-Tags (wie z.B. `<hr>` (Lineal)).
-Zur Eindeutigkeit empfehle ich: schreibt hier **`<hr/>`**!
+Tags umschließen anderen Inhalt, so wie wie `<html> ... </html>`
+
+Daraus ergeben sich Verwandtschaftsbeziehungen:
+  - Parent (Eltern): das nächst äußere Tag
+  - Child (Kind): Das umschlossene Child
+  - Sibling: (Geschwister)
+
+Somit ist `<html>` *Parent* von `<head>` und `<body>`, beide letzten sind Siblings und Childs von `<html>`.
+
+Typen von Tags:
+- opening, z.B. `<body`
+- closing, z.B. `</body`
+- Standalone-Tags (wie z.B. `<hr/>` (Lineal)).  
+Zur Eindeutigkeit wird empfohlen: `<hr/>`. Man *darf* auch nur `<hr>` schreiben.
 - Tags haben fast immer Attribute (auch Eigenschaften oder Parameter genannt)
 - z.B. `<a href="https://google.at/">` Attribut ist hier die Angabe "href", also wohin führt der Link.
+- Gute HTML-Editoren schlagen mögliche Attribute vor.
 
 # HTML: Gliederung & Anwendungsfälle
 
@@ -30,6 +41,8 @@ Zur Eindeutigkeit empfehle ich: schreibt hier **`<hr/>`**!
 `<!DOCTYPE html>` (das meint html5, den momentanen Standard)   
 - `<html>` (attr: lang)
   - `<head` (Metainformationen, z.B. charset)
+    - `<title>`: Tab-Überschrift
+    - `<meta>`: name/content Paare, charset, keywords, viewport, ..
   - `<body>` wird untergliedert in:
     - *`<header>`* (analog Word: Kopfzeile)
       - *`<nav>`* (Navigation)
@@ -37,20 +50,24 @@ Zur Eindeutigkeit empfehle ich: schreibt hier **`<hr/>`**!
       - *`<article>`*
         - *`<section>`*
     - *`<footer>`* (analog Word: Fußzeile)
+- `<iframe>` .. Zum Einbetten anderer Websites, oft aus Sicherheitsgründen nicht möglich.
 
-## Weitere Tags:
+## Weitere Tags zur Strukturierung:
 - `<a>` - Das "Anker (anchor)" Tag. Zum drauf Klicken und Navigieren
   - href
   - name - Zum Navigieren auf einer langen Webpage
-- `<div>` - Ein Block mit rechts und links keinem Platz
-- `<span>` - Teil einer "Zeile"
+- `<div>` - Container: Ein Block mit rechts und links keinem Platz, früher häufig verwendet, jedoch seit html5 wieder sinkend. (s. `article`, `section`, `header`, `footer` u.Ä.)
+- `<span>` - Container: Teil einer "Zeile"
 - `<p>` - Paragraph
 - `<br/>` und `<hr/>` (standalone): Linebreak, horizontal Ruler (Lineal bzw. Strich)
 - `<img>` Image-Tag, Einbetten von Bildern
 - `<video>` Tag: Einbetten von Videos, *controls, poster, width, autoplay*
+
+## Benutzereingabe, Textfelder und Buttons
 - `<input>` - Eingabefeld
-  - `textarea` .. usw
+  - `<textarea>` .. usw
   - type="[text|password|date|email|file|checkbox|radio|...]"
+- Parent-Element: `<form>`, ein Web-Formular. Umschließt also die input-Felder. Braucht am *Server* Funktionalität, die etwas mit den Daten macht.
 
 # HTML: Tabellen & Grafiken
 1. Unordered List `<ul>  .. </ul>`
