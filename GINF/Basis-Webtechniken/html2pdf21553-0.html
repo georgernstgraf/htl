@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>1_html</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+</head>
+<body>
+<h1 id="web-technologie-stack">Web-Technologie-Stack</h1>
+<ul>
+<li>Request - Response</li>
+<li>Server - Client</li>
+<li>Stateless (??) (!!)
+<ul>
+<li>Umgehungsmethoden: tokens, session-ids, cookies</li>
+</ul></li>
+<li>Ressourcen:
+<ul>
+<li><a href="https://www.w3.org/">W3 Org</a> WWW Konsortium, definitive Referenz</li>
+<li><a href="https://validator.w3.org/">w3c validator</a></li>
+<li><a href="https://atom.io">Atom Editor</a> <em>Empfehlung!</em></li>
+<li><a href="https://www.w3schools.com/">W3Scools</a></li>
+<li><a href="https://www.selfhtml.org/">selfhtml</a> Referenz und Tutorials, <strong>sehr hilfreich</strong></li>
+<li>spielen mit <code>&lt;F12&gt;</code> im Browser</li>
+<li>Rechtsklick: Inspect Element</li>
+</ul></li>
+</ul>
+<h1 id="teil-i-html-aufbau-und-bestandteile">Teil I: HTML: Aufbau und Bestandteile</h1>
+<h2 id="über-tags">Über Tags:</h2>
+<p>Tags umschließen anderen Inhalt, so wie wie <code>&lt;html&gt; ... &lt;/html&gt;</code></p>
+<p>Daraus ergeben sich Verwandtschaftsbeziehungen:</p>
+<ul>
+<li>Parent (Eltern): das nächst äußere Tag</li>
+<li>Child (Kind): Das umschlossene Child</li>
+<li>Sibling: (Geschwister)</li>
+</ul>
+<p>Somit ist <code>&lt;html&gt;</code> <em>Parent</em> von <code>&lt;head&gt;</code> und <code>&lt;body&gt;</code>, beide letzten sind Siblings und Childs von <code>&lt;html&gt;</code>.</p>
+<p>Typen von Tags:</p>
+<ul>
+<li>opening, z.B. <code>&lt;body</code></li>
+<li>closing, z.B. <code>&lt;/body</code></li>
+<li>Standalone-Tags (wie z.B. <code>&lt;hr/&gt;</code> (Lineal)).<br />
+Zur Eindeutigkeit wird empfohlen: <code>&lt;hr/&gt;</code>. Man <em>darf</em> auch nur <code>&lt;hr&gt;</code> schreiben.</li>
+<li>Tags haben fast immer Attribute (auch Eigenschaften oder Parameter genannt)</li>
+<li>z.B. <code>&lt;a href="https://google.at/"&gt;</code> Attribut ist hier die Angabe "href", also wohin führt der Link.</li>
+<li>Gute HTML-Editoren schlagen mögliche Attribute vor.</li>
+</ul>
+<h1 id="html-gliederung--anwendungsfälle">HTML: Gliederung &amp; Anwendungsfälle</h1>
+<h2 id="gliederung-strukturierung">Gliederung, Strukturierung</h2>
+<p><code>&lt;!DOCTYPE html&gt;</code> (das meint html5, den momentanen Standard)</p>
+<ul>
+<li><code>&lt;html&gt;</code> (attr: lang)
+<ul>
+<li><code>&lt;head</code> (Metainformationen, z.B. charset)
+<ul>
+<li><code>&lt;title&gt;</code>: Tab-Überschrift</li>
+<li><code>&lt;meta&gt;</code>: name/content Paare, charset, keywords, viewport, ..</li>
+</ul></li>
+<li><code>&lt;body&gt;</code> wird untergliedert in:
+<ul>
+<li><em><code>&lt;header&gt;</code></em> (analog Word: Kopfzeile)
+<ul>
+<li><em><code>&lt;nav&gt;</code></em> (Navigation)</li>
+</ul></li>
+<li><em><code>&lt;main&gt;</code></em>
+<ul>
+<li><em><code>&lt;article&gt;</code></em>
+<ul>
+<li><em><code>&lt;section&gt;</code></em></li>
+</ul></li>
+</ul></li>
+<li><em><code>&lt;footer&gt;</code></em> (analog Word: Fußzeile)</li>
+</ul></li>
+</ul></li>
+<li><code>&lt;iframe&gt;</code> .. Zum Einbetten anderer Websites, oft aus Sicherheitsgründen nicht möglich.</li>
+</ul>
+<h2 id="weitere-tags-zur-strukturierung">Weitere Tags zur Strukturierung:</h2>
+<ul>
+<li><code>&lt;a&gt;</code> - Das "Anker (anchor)" Tag. Zum drauf Klicken und Navigieren
+<ul>
+<li>href</li>
+<li>name - Zum Navigieren auf einer langen Webpage</li>
+</ul></li>
+<li><code>&lt;div&gt;</code> - Container: Ein Block mit rechts und links keinem Platz, früher häufig verwendet, jedoch seit html5 wieder sinkend. (s. <code>article</code>, <code>section</code>, <code>header</code>, <code>footer</code> u.Ä.)</li>
+<li><code>&lt;span&gt;</code> - Container: Teil einer "Zeile"</li>
+<li><code>&lt;p&gt;</code> - Paragraph</li>
+<li><code>&lt;br/&gt;</code> und <code>&lt;hr/&gt;</code> (standalone): Linebreak, horizontal Ruler (Lineal bzw. Strich)</li>
+<li><code>&lt;img&gt;</code> Image-Tag, Einbetten von Bildern</li>
+<li><code>&lt;video&gt;</code> Tag: Einbetten von Videos, <em>controls, poster, width, autoplay</em></li>
+</ul>
+<h2 id="benutzereingabe-textfelder-und-buttons">Benutzereingabe, Textfelder und Buttons</h2>
+<ul>
+<li><code>&lt;input&gt;</code> - Eingabefeld
+<ul>
+<li><code>&lt;textarea&gt;</code> .. usw</li>
+<li>type="[text|password|date|email|file|checkbox|radio|...]"</li>
+</ul></li>
+<li>Parent-Element: <code>&lt;form&gt;</code>, ein Web-Formular. Umschließt also die input-Felder. Braucht am <em>Server</em> Funktionalität, die etwas mit den Daten macht.</li>
+</ul>
+<h1 id="html-tabellen--grafiken">HTML: Tabellen &amp; Grafiken</h1>
+<ol>
+<li>Unordered List <code>&lt;ul&gt;  .. &lt;/ul&gt;</code></li>
+</ol>
+<ul>
+<li><code>&lt;li&gt;</code> .. List Item mit "Bullet ()"</li>
+</ul>
+<ol start="2">
+<li>Ordered List <code>&lt;ol&gt; .. &lt;/ol&gt;</code></li>
+</ol>
+<ul>
+<li><code>&lt;li&gt;</code> .. List Item mit Nummer</li>
+</ul>
+<ol start="3">
+<li>Deskriptive List <code>&lt;dl&gt; .. &lt;/dl&gt;</code> (Beschreibungsliste)</li>
+</ol>
+<ul>
+<li><code>&lt;dt&gt;</code> <em>Term</em></li>
+<li><code>&lt;dd&gt;</code> <em>Data</em></li>
+</ul>
+<ol start="4">
+<li><code>&lt;table&gt; .. &lt;/table&gt;</code></li>
+</ol>
+<ul>
+<li>tr th td caption colspan thead tbody ...</li>
+</ul>
+<ol start="5">
+<li><code>&lt;img&gt;</code> Image-Tag</li>
+</ol>
+<ul>
+<li>src, width, height, ...</li>
+</ul>
+<h1 id="css-designelemente">CSS: Designelemente</h1>
+<h1 id="css-selektoren">CSS: Selektoren</h1>
+<h1 id="javascript-interaktivität">JavaScript: Interaktivität</h1>
+<h1 id="cms">CMS</h1>
+</body>
+</html>
