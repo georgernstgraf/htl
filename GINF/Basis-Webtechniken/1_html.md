@@ -1,4 +1,4 @@
-# Web-Technologie-Stack
+# Web-Technologie Stack. **Teil 1: HTML**
 - Request - Response
 - Server - Client
 - Stateless (??) (!!)
@@ -12,18 +12,15 @@
   - spielen mit `<F12>` im Browser
   - Rechtsklick: Inspect Element
 
-# HTML: Aufbau und Bestandteile
+# HTML Aufbau und Bestandteile, Tags:
 
-## Über Tags:
-
-Tags umschließen anderen Inhalt, so wie wie `<html> ... </html>`
-
+Tags umschließen anderen Inhalt, so wie wie `<html> ... </html>`.
 Daraus ergeben sich Verwandtschaftsbeziehungen:
   - Parent (Eltern): das nächst äußere Tag
   - Child (Kind): Das umschlossene Child
   - Sibling: (Geschwister)
 
-Somit ist `<html>` *Parent* von `<head>` und `<body>`, beide letzten sind Siblings und Childs von `<html>`.
+Somit ist `<html>` *Parent* von `<head>` und `<body>`, beide letzteren sind untereinander Siblings und beide sind Childs von `<html>`.
 
 Typen von Tags:
 - opening, z.B. `<body`
@@ -81,8 +78,3 @@ Zur Eindeutigkeit wird empfohlen: `<hr/>`. Man *darf* auch nur `<hr>` schreiben.
   - tr th td caption colspan thead tbody ...
 5. `<img>` Image-Tag
   - src, width, height, ...
-
-# CSS: Designelemente
-# CSS: Selektoren
-# JavaScript: Interaktivität
-# CMS
