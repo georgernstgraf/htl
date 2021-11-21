@@ -16,7 +16,7 @@ Beispiele:
   - Windows "cmd"
   - Windows PowerShell
   - ksh, csh, zsh .. ältere, nicht mehr sehr häufig verwendet.
-  
+
 ### Shell Kommandos:
 [   chgrp      ln              mount tee             cat
 fdisk           gpart             ls             ping            sh              test          
@@ -30,7 +30,3 @@ camcontrol      date            ed              fsirand         hostname        
 cat             dd              ex              gbde            id              ldconfig        more            newfs_msdos     rdump           rtsol           tail            whoami
 ccdconfig       devfs           expr            geom            ifconfig        less            mount           nextboot        realpath        savecore        tar             xz
 chflags         df              fastboot        getfacl         init            link            mount_cd9660    nos-tun         reboot          sed             tcsh            xzcat
-
-
-
-

@@ -39,11 +39,11 @@ normalerweise weder Lese- noch Schreibzugriff auf den RAM-Bereich von anderen Pr
 Multitasking: Prozesse werden *gleichzeitig* ausgeführt.
 
 Das Betriebssystem sorgt für eine "faire" Verteilung von Ressourcen (Filesystem IO, Rechenzeit, Netzwerk-Bandbreite) unter allen lauffähigen Prozessen. Dies wird ermöglicht durch den Prozess-Scheduler
-(Zeitplaner). 
+(Zeitplaner).
 
 [Prozess-Scheduler](https://de.wikipedia.org/wiki/Prozess-Scheduler)
 
-Moderne Betriebssystem-Kernels machen jede Millisekunde (also 1000 Mal pro Sekunde) einen sogenannten "Context-Switch". Hier wird entschieden, welcher Prozess als nächstes "drankommt". Somit ist 
+Moderne Betriebssystem-Kernels machen jede Millisekunde (also 1000 Mal pro Sekunde) einen sogenannten "Context-Switch". Hier wird entschieden, welcher Prozess als nächstes "drankommt". Somit ist
 auch schon bei einem single-Core Prozessor ein (quasi)-Multitasking möglich. Bei mehreren Cores laufen Prozesse tatsächlich gleichzeitig ab, jedoch maximal soviele, wie Cores auf dem System
 vorhanden sind. Der Scheduler verteilt die laufenden Prozesse auf die vorhandenen Cores.
 
@@ -65,4 +65,3 @@ Beispiele:
 
 Besonders niedrige Priorität wird dann für Prozesse oder Prozessgruppen verwendet, wenn das Rechenergebnis nicht schnell fertig sein muß und die reibungslose Funktion des Computers wichtig ist.
 Beispiele: verteiltes Rechnen für wissenschaftliche Fragestellungen: [Projekte_verteilten_Rechnens](https://de.wikipedia.org/wiki/Liste_der_Projekte_verteilten_Rechnens) oder zB auch bitcoin-mining.
-
