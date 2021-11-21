@@ -3,6 +3,7 @@
 - Seitenlayout
   - Ränder
   - Papiergröße
+  - Kopf- und Fußzeile, mit automatischen Feldern
 - Tastaturkürzel
   - Websuche: "Keyboard shortcuts in Word"
   - ctrl-a (ctrl = strg = "Control" = "Steuerung")
@@ -19,14 +20,15 @@
   - light (dünn)
   - *italic (kursiv)*
   - unter- und durchgestrichen
-  - Google Noto Fonts (No Tofu!) □
+  - Google Noto Fonts (No Tofu □ !)
 - Absatzformatierung
   - links- und rechtsbündig
   - Blocksatz
   - Flattersatz
 - Spezialfunktionen
-  - Inhaltsverzeichnis
-  - Literaturverzeichnis
+  - Inhaltsverzeichnis (Formatvolagen: Überschriften. div. Ebenen!)
+  - Literaturverzeichnis und Quellenverwaltung
+  - Abbildungsverzeichnis
   - suchen / ersetzen (ctrl-g)
   - Serienbriefe
     - Daten können von Tabelle aus Word oder Excel kommen
