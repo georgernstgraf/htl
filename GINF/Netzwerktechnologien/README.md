@@ -1,12 +1,12 @@
 ## Netzwerktechnologien
-
+✓
 ### Lehrplan:
-Kommunikationsmodelle und deren Unterschiede  
+1 - Kommunikationsmodelle und deren Unterschiede  
 Technologien und Komponenten  
 Möglichkeiten der Adressierung  
-Topologien  
-Netzwerkkomponenten  
-Übertragungsmedien  
+3 - Topologien  
+2 - Netzwerkkomponenten  
+2 - Übertragungsmedien  
 Normen und Standards  
 OSI-Modell  
 Grundlagen der Adressierung  
