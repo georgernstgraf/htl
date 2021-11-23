@@ -1,5 +1,4 @@
-## Netzwerktechnologien
-✓
+## Netzwerktechnologien ✓
 ### Lehrplan:
 1 - Kommunikationsmodelle und deren Unterschiede  
 Technologien und Komponenten  

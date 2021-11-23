@@ -1,4 +1,4 @@
-# physical Layer
+# physical Layer (Layer 1)
 
 ## Kupferdraht
 [`Thinnet`](https://de.wikipedia.org/wiki/10BASE2) - lesen  
