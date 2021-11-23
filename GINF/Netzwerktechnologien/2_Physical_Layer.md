@@ -16,7 +16,7 @@
 [WLAN](https://de.wikipedia.org/wiki/Wireless_Local_Area_Network) - lesen!  
 Wichtig:
 - Standards in der Norm `IEEE 802.11`
-- Frequenzen: 2,4 und 5GHz bertragungsmedien
+- Frequenzen: 2,4 und 5GHz Übertragungsmedien
 
 ## Komponenten
 siehe [Video](https://youtu.be/qJsjizuuDB4). Nerdig, unterhaltsam, informativ
