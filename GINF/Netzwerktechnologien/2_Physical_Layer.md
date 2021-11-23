@@ -2,7 +2,7 @@
 
 ## Kupferdraht
 [`Thinnet`](https://de.wikipedia.org/wiki/10BASE2) - lesen  
-`Ethernet`: Twisted-Pair-Kabel](https://de.wikipedia.org/wiki/Twisted-Pair-Kabel#Kategorie_5)
+`Ethernet`: [Twisted-Pair-Kabel](https://de.wikipedia.org/wiki/Twisted-Pair-Kabel#Kategorie_5)
 - Standard späte '80er und '90er Jahre: 10BaseT (10Mb/s; halbduplex)
 - dann 100BaseTX (RJ45/Cat5; 100Mb/s, Vollduplex)
 - Verbreitet heute: CAT6 (1Gb/s)
