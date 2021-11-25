@@ -2,8 +2,13 @@
 
 ## **Teil 1: HTML**
 
+### Was bedeuten die Kürzel
+- HTML: "HyperText Markup Language"
+- HTTP: "HyperText Transfer Protocol"
+
 ### allgemein:
-- Request - Response
+- HTML Dateien werden über das HTTP Protokoll übertragen
+- Request - Response (`GET` -> `200 OK`)
 - Server - Client
 - Stateless (??) (!!) - Umgehungsmethoden: tokens, session-ids, cookies
 
@@ -14,7 +19,9 @@
 - [W3Scools](https://www.w3schools.com/)
 - [selfhtml](https://www.selfhtml.org/) Referenz und Tutorials, **sehr hilfreich**
 - spielen mit `<F12>` im Browser
-- Rechtsklick: Inspect Element
+- Rechtsklick im Browser
+  - Inspect Element
+  - View Page Source
 
 ## HTML Aufbau und Bestandteile, Tags:
 
