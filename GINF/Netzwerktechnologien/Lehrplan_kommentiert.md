@@ -15,12 +15,11 @@ Siehe [OSI-Modell](https://de.wikipedia.org/wiki/OSI-Modell) auf Wikipedia. Merk
 - Layer 6 (Kompression, Crypto) (`Presentation`)
 - Layer 7 (`Application`)
 
-Die Kommunikation hört allerdings oft nicht hier auf, deswegen gibt es eine nicht-technische Erweiterung des OSI-Modells:
+Die Kommunikation hört allerdings oft nicht hier auf, deswegen gibt es eine nicht-technische Erweiterung des OSI-Modells, die ersten sieben Schichten sind somit den folgenden untergeordnet:
 - Layer 8 (human Layer)
 - Layer 9 (Organisation)
 - Layer 10 (Recht und Staat)
-
-`Social Awareness`, `social engeneering`, `Netzpolitik`, `Echokammern`
+- Schlagworte des Themenkomplexes: `Social Awareness`, `social engeneering`, `Netzpolitik`, `Echokammern`
 
 ### Unterschiede zwischen
 - simplex, halbduplex, duplex, multiplex

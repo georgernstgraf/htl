@@ -12,9 +12,18 @@ Wortherkunft aus dem Griechischen
 - Token Ring (historisch)
 
 ## Sterntopologie
-- In heutigen LANs, jedes Endgerät mit Switches verbunden, diese haben wiederum einen Uplink zu anderen Switches und Routern
+- In heutigen LANs, jedes Endgerät mit Switches verbunden, diese haben wiederum Uplinks zu anderen Switches und Routern
 
 ## Mesh (Maschen) - Topologie
-- Funknetze
+- Mesh - Funknetze
 - Routingprotokolle (!!)
-- Internet Backbone
+- Internet Backbone und Redundanz: Mehrere Routen (=Wege) führen zum Ziel. Router tauschen sich gegenseitig aus über Qualität, Preis und Verfügbarkeit ihrer Routen. Sie verwenden dazu sogenannte Routingprotokolle.
+
+# Ethernet - gängige Technologie für lokale Netzwerke
+- Ethernet ist logisch gesehen eine Bustopologie, aber tatsächlich physisch eine Sterntopologie. Jeder PC hat ein ein Kabel zum Switch, dieser also ist die Mitte des Sternes.
+-  historisch ist Ethernet die Technologie des 10BaseT Busses mit Collision Problemen, was heute von Switches erledigt wird. **Nicht jeder hört mehr alles** auf diesem Pseudo-Bus, weil der Switch am Layer 2 (MAC-Adresse = Ethernetadresse = Hardwareadresse) die entsprechenden Switch-Ports zuordnen kann.
+- Ethernet Frames werden von der Netzwerkkarte ausgesendet und empfangen
+
+# WIFI
+- Da wir in der Funkwelt sind, darf immer nur eine\* reden, somit **halbduplex**.
+- Auch hier gibt es Ethernet-Frames und MAC Adressen.
