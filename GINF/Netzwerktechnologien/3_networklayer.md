@@ -10,6 +10,11 @@ siehe [Video](https://youtu.be/qJsjizuuDB4). Nerdig, unterhaltsam, informativ
 
 ## IP Subnetting
 
+`ip route`
+
+DHCP - dynamic host configuration protocol
+DNS
+
 ## Werkzeuge
 Windows: `Rechner` im Modus "Programmierer"  
 Linux: `Calculator` ebenfalls "Programming Mode"  
