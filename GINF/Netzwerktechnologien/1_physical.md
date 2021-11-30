@@ -16,7 +16,7 @@ Simplex ist hier in beide Richtungen möglich.
 - modernes Cat5(6,7) Ethernet
 
 ## Multiplex
-Mehrere Vollduplex Kanäle in einem Medium, z.B. einem Glasfaserbündel
+Mehrere Vollduplex Kanäle in einem Medium, z.B. einem Glasfaserbündel oder mehrere "Channels" bei NVME (M.2) SSDs.
 
 # physical Layer (Layer 1)
 

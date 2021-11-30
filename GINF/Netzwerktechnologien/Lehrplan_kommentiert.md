@@ -34,8 +34,8 @@ Die Kommunikation hört allerdings oft nicht hier auf, deswegen gibt es eine nic
 - NTP
 - /etc/services
 
----
 ### Netzwerke hinsichtlich der verwendeten Technologien und Komponenten beschreiben und bewerten
-- d
+... folgt aus Obigem
 
 ### in einfachen Netzwerken geeignete Möglichkeiten der Adressierung erklären und einsetzen
+... folgt aus Obigem

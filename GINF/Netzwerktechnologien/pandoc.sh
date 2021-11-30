@@ -8,7 +8,7 @@ cond_pandoc () {
   then
     return
   fi
-  echo "pandoc für " $MD
+  echo "pandoc für" $MD
   pandoc -f gfm -o $PDF $MD
 }
 
