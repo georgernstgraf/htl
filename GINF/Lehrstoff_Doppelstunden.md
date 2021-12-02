@@ -36,7 +36,7 @@
 1. TCP/IP-Werkzeuge
 1. Netzwerkdienste
 1. Weitreichende Netzwerke
-1. Netzwerkinfrastruktur und Sicherheut
+1. Netzwerkinfrastruktur und Sicherheit
 
 # Basis-Webtechniken
 1. Web-Technologie-Stack
