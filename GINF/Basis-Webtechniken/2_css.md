@@ -36,7 +36,8 @@ css-Variablen
 das `root:` - Element kann Variablen haben  
 d
 
-![image](rgb.png)
+### RGB vs. CMYK
+[Erklärseite](https://www.lcipaper.com/kb/what-are-the-differences-between-pantone-cmyk-rgb.html)
 
 
 
