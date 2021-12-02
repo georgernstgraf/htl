@@ -1,5 +1,10 @@
 ## CSS: style (Designelemente) (WEBStack, Teil II)
 
+### Online-Resourcen
+[W3 Schools](https://www.w3schools.com/css/default.asp)
+[tutorial](https://youtu.be/ieTHC78giGQ)
+mMn immer noch das Beste ist [Selfhtml](https://wiki.selfhtml.org/wiki/CSS/Tutorials)
+
 ### Inline (Element-Attribute)
 Fast jedes Container-Element versteht das `<style="...">` Attribut, von `<body>` abwärts.  
 Beispiel:  `<section style="background: aqua">Blindtext</section>`
@@ -19,9 +24,12 @@ Was alles kann einen Style bekommen:
 - Attribute, **"[]"**,
   - `[type='radio'] { margin: 20px; }`  
 
-Weiters können Variablen gesetzt werden, sowohl innerhalb der Blöcke als auch im `root: { ..}` Context.
+Es können Variablen gesetzt werden, sowohl innerhalb der Blöcke als auch im `root: { ..}` Context.
 
 Media-Query zB `@media (max-width: 350px) { .. }`
+
+### style in externer Datei
+Wird so eingebunden: `<link rel="stylesheet" href="stylesheet.css">`
 
 ### CSS Klassen
 Im `<style>` - Block wird eine Klasse definiert
@@ -34,7 +42,6 @@ ID ist "very specific".
 inline ist "most specific"
 css-Variablen
 das `root:` - Element kann Variablen haben  
-d
 
 ### RGB vs. CMYK
 [Erklärseite](https://www.lcipaper.com/kb/what-are-the-differences-between-pantone-cmyk-rgb.html)

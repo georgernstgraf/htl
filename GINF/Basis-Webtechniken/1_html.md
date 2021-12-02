@@ -16,7 +16,7 @@
 - [W3 Org](https://www.w3.org/) WWW Konsortium, definitive Referenz
 - [w3c validator](https://validator.w3.org/)
 - [Atom Editor](https://atom.io)  *Empfehlung!*
-- [VS Code IDE](https://code.visualstudio.com/) - integrierter Editor: Atom 😉
+- [VS Code IDE](https://code.visualstudio.com/) - integrierter Editor: Atom ;)
 - [W3Scools](https://www.w3schools.com/)
 - [selfhtml](https://www.selfhtml.org/) Referenz und Tutorials, **sehr hilfreich**
 - spielen mit `<F12>` im Browser
