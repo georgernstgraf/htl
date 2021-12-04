@@ -1,0 +1,31 @@
+# DHCP
+
+dynamic host configuration protocol  
+[DHCP Wikipedia](https://de.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol)
+
+Bei Booten oder Einschalten des Netzwerkes schickt der Host "dhcp Broadcasts" an die broadcast Adresse des Netzwerkes.
+Ein DHCP Server antwortet mit Informationen, wie der Host sein Netzwerk konfigurieren soll. Folgende Sachen werden u.A. mitgeteilt.
+- IP Adresse
+- Netzmaske
+- Default Gateway
+- zu verwendene DNS Server
+- Gültigkeitsdauer dieser Konfiguration (Lease genannt .. die IP Adresse wird "geleast")
+
+# DNS
+
+Domain Name System  
+[DNS Wikipedia](https://de.wikipedia.org/wiki/Domain_Name_System)
+
+Es ermöglicht die Zuordnung von Hostnamen zu IP Adressen, z.B. `www.spengergasse.at has address 193.170.108.10`.
+
+Abfragewerkzeug: "dig".
+
+Weiter ist DNS hierarchisch, ausgehend von sog. root-servern.
+Organsiationen:
+- [IANA](https://de.wikipedia.org/wiki/Internet_Assigned_Numbers_Authority) Aufgabe:
+  - Weltweite Verteilung von IPv4 Adressen (/8 Blöcke)
+  - Organisation des DNS-Namensraumes (root-nameserver)
+  - blah
+- [ICANN](https://de.wikipedia.org/wiki/Internet_Corporation_for_Assigned_Names_and_Numbers)
+- [RIPE]()
+- []

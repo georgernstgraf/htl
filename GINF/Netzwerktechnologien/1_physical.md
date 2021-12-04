@@ -1,3 +1,5 @@
+# Layer 1 - physical
+
 # Begriffe der Signalübertragung
 
 ## Simplex (One-Way, Einbahn)

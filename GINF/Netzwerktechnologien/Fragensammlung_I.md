@@ -1,10 +1,20 @@
 # Fragensammlung Netzwerke Teil 1
 
-### Basics:
+Wie heißen die 7 Schichten des OSI Modelles und was bedeuten sie?
+
+## Basics (\*plex, physisch, Ether)
 
 erkläre einen der Begriffe simplex, halbduplex, volldumplex, multiplex
 
 welche physischen medien kennen sie?
+
+Nennen Sie ungefähre Übertragungs-Reichweiten für kabelgebundene Netzwerke!
+
+Nennen Sie ungefähre Übertragungs-Reichweiten für Funknetze!
+
+Nennen Sie ungefähre Übertragungs-Reichweiten für Glasfaser Datenleitungen!
+
+Nennen Sie ungefähre Übertragungs-Reichweiten für Richtfunkverbindungen.
 
 Was bedeutet die "MAC" Adressse?
 
@@ -19,8 +29,6 @@ wieviele bytes hat eine ethernet-Adresse?
 gibt es in einem WLAN ebenfalls Ethernet Adressen?
 
 welche Technologie löst in heutigen kabelgebundenen Netzwerken das Problem von Signalkollisionen?
-
-Wie heißen die 7 Schichten des OSI Modelles und was bedeuten sie?
 
 ### IP / TCP
 

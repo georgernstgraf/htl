@@ -8,7 +8,8 @@ Andere Begriffe dafür:
 ## Transmission Control
 
 [TCP](https://de.wikipedia.org/wiki/Transmission_Control_Protocol) auf Wikipedia.  
-"TCP" ist eine *Implementierung der Transportschicht*.
+"TCP" ist eine *Implementierung der Transportschicht*.  
+Weiters: TCP-Pakete *sind* IP Pakete.
 
 Diese "Schichte" sorgt für zweierlei Dinge:
 

@@ -2,9 +2,9 @@
 
 ## neues Feature: Routing
 
-Routing ermöglich Datenpaketen, daß sie das Ursprungsnetz verlassen und so auf die Reise gehen. Ein Ethernet-Frame **kann das nicht**. Auf dem Layer 3 beginnt IP (Internet Protocol) bedeutsam zu werden.
+Routing ermöglich Datenpaketen, daß sie das Ursprungsnetz verlassen und so auf die Reise gehen. Ein Ethernet-Frame **kann das nicht**. Auf dem **Layer 3 beginnt IP (Internet Protocol)** bedeutsam zu werden. Netzwerkhardeware, die dieses ermöglicht, heißt "Router" oder "IP-Router".
 
-siehe [Video](https://youtu.be/qJsjizuuDB4). Nerdig, unterhaltsam, informativ
+siehe [Video](https://youtu.be/qJsjizuuDB4) zu diesem Thema.
 
 ## IP Subnetting.
 
