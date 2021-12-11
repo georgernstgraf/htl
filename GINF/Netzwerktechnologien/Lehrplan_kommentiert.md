@@ -39,3 +39,9 @@ Die Kommunikation hört allerdings oft nicht hier auf, deswegen gibt es eine nic
 
 ### in einfachen Netzwerken geeignete Möglichkeiten der Adressierung erklären und einsetzen
 ... folgt aus Obigem
+
+### pua:
+1. TCP/IP-Werkzeuge
+1. Netzwerkdienste
+1. Weitreichende Netzwerke
+1. Netzwerkinfrastruktur und Sicherheit
