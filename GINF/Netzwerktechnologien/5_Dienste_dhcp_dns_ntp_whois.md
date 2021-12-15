@@ -38,6 +38,8 @@ mailgate.spengergasse.at has address 193.170.108.20
 - [IANA](https://de.wikipedia.org/wiki/Internet_Assigned_Numbers_Authority) Aufgabe:
   - Weltweite Verteilung von IPv4 Adressen (/8 Blöcke)
   - Organisation des DNS-Namensraumes (root-nameserver)
+  - Verwaltung der Zeitzonen-Files (lokales Offset, Sommer/Winterzeiten)
+  - Betrieb des IANA-whois
 - [ICANN](https://de.wikipedia.org/wiki/Internet_Corporation_for_Assigned_Names_and_Numbers)
   - siehe dort u. Aufgaben (IP-Blöcke an RIR, AS, TLD Verwaltung)
   - Verwaltung von Portnummern (/etc/services)
