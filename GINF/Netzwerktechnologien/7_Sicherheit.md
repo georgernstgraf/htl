@@ -62,10 +62,24 @@ SLA [https://de.wikipedia.org/wiki/Service-Level-Agreement](https://de.wikipedia
 
 ### Allgemeines
 
-- Kerckhoffs Prinzip: Die Sicherheit eines Systems darf nicht von der Geheimhaltung der Algorithmen abhängen, sondern nur von der Geheimhaltung eines Schlüssels. (Security by Obscurity)
+- Kerckhoffs Prinzip: Die Sicherheit eines Systems darf nicht von der Geheimhaltung der Algorithmen abhängen, sondern nur von der Geheimhaltung eines Schlüssels. (Security by Obscurity). Stichwort: Reverse-Engeneering
+- Man In The Middle
+  - entweder "rein passiv" oder
+  - aktiv (ändert Pakete oder gibt sich als einer der 2 Partner aus)
+  - aktiv relevant bei DNS-Poisoning
 - Symmetrische (AES, DES): Es gibt einen Schlüssel, der zum Verschlüsseln **und** Entschlüsseln verwendet wird.
+  - Vorteil: Schnelle Algorithmen, Stromchiffren
 - Asymmetrische (RSA, DH): Jeder Partner hat ein Schlüssel**paar**, einer öffentlich, einer privat.
-- Tool: OpenSSL
+  - Vorteil: public/private Keys
+- Tools
+  - OpenSSL, kennt die allermeisten Algorithmen
+  - sha256sum, md5sum, ... Hashfunktionen über Files
+
+
+
+
+
+
 
 
 
