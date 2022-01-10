@@ -15,7 +15,7 @@ Andere Benennungen:
 Kommunikation zwischen zwei Systemen wird organisiert. Eine Session ist z.b. eine Videokonferenz. z.B. die Synchronisation zwischen
 Gesicht und Lippen ist ein "Service" des Layer 5. Man kann "wiedereinsteigen". Ebenso kann man Browser-Cookies oder Session-ID's als Elemente des Layer 5 betrachten.
 
-### Weitere Services im Layer 5:
+### Weitere Services im Layer 5
 
 - Authentisierung (authentication): Feststellung, daß jemand tatsächlich derjenige ist, der behauptet wird, es zu sein.
 - Authorisierung: Definition was ein Benutzer einer Applikation machen darf oder nicht. Beispiel in einem CMS unterschiedliche Rollen: Leser / Autor / Admin. Merkhilfe: You are not authorized. Also: DU darfst das nicht. Das, WER Du bist, wurde bereits festgestellt.

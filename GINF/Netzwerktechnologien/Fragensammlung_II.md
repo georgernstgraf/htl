@@ -1,7 +1,7 @@
 # Vorbereitung NW Test 2
 
-- DNS
-- NTP
+- Was ist DNS
+- Was ist NTP
 
 ## Welche Informationen können mittels "whois" abgefragt werden?
 
@@ -30,4 +30,17 @@
 Nennen Sie eine typische Problemstellung, für welche VPN eine Lösung ist.
 
 ## Fragen zu NAT
+
+Wofür seht das Kürzel?
+
+## Crypto 
+
+Wodurch unterscheidet sich symmetrische von asymmetrischer Kryptographie?
+
+Welches Problem löst das Diffie-Helman Verfahren?
+
+Welche Arten von Information sind in Digitalen Zertifikaten enthalten?
+
+Was ist ein Hash-Algorithmus?
+
 

@@ -13,9 +13,9 @@ SLA [https://de.wikipedia.org/wiki/Service-Level-Agreement](https://de.wikipedia
 24/7
 
 - Redundanz
-  - round robin, Bsp: google MX
+  - DNS round robin, Bsp: google MX, at.pool.ntp.org
   - ha-proxy (mehrere Backend-Server)
-- Begriff des "single point of failure"  
+- Begriff des "single point of failure", muß genau analysiert werden, oft werden die übersehen  
 - anycast (eine IP, viele Server)
 - stabile Betriebssysteme
 
