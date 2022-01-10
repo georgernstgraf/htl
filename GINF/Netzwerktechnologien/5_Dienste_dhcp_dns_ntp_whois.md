@@ -52,7 +52,7 @@ mailgate.spengergasse.at has address 193.170.108.20
 - Weltweit verteiltes System von Uhren
 - Im ganzen Internet gleiche Zeit: UTC
   - Aber: Schaltsekunden!
-- Atomuhren und GPS: Stratum 0
+- Atomuhren und GPS: Stratum 0 (beste Zeitquellen)
   - Stratum 1: direkte Clients von Stratum 0 Serveren
   - Stratum 2: direkte Clients von Stratum 1 Serveren
   - usw.

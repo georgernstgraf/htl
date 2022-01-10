@@ -2,6 +2,7 @@
 
 - Was ist DNS
 - Was ist NTP
+- Was ist ein Socket?
 
 ## Welche Informationen können mittels "whois" abgefragt werden?
 
@@ -27,20 +28,26 @@
 
 ## Fragen zu VPN
 
-Nennen Sie eine typische Problemstellung, für welche VPN eine Lösung ist.
+- Nennen Sie eine typische Problemstellung, für welche VPN eine Lösung ist.
+- Was wird in RFC 1918 festgelegt?
 
 ## Fragen zu NAT
 
-Wofür seht das Kürzel?
+- Wofür seht das Kürzel?
+- Erklären Sie in einigen Sätzen die Funktionsweise von NAT
+- Was versteht man unter "reverse NAT"? Erklären Sie in eigenen Worten!
 
-## Crypto 
+## Crypto
 
-Wodurch unterscheidet sich symmetrische von asymmetrischer Kryptographie?
-
-Welches Problem löst das Diffie-Helman Verfahren?
-
-Welche Arten von Information sind in Digitalen Zertifikaten enthalten?
-
-Was ist ein Hash-Algorithmus?
-
+- Wodurch unterscheidet sich symmetrische von asymmetrischer Kryptographie?
+- Welches Problem löst das Diffie-Helman Verfahren?
+- Ist das Diffie-Helman Verfahren der symmetrischen oder asymmetrischen Kryptographie zuzuordnen?
+- Welche Informationen sind in Digitalen Zertifikaten enthalten?
+- Welche besondere Eigenschaft hat ein Root-Zertifikat?
+- Kann ein Zertifikat abgelaufen sein (also nicht mehr gültig)?
+- Unter welchen Umständen ist ein nicht abgelaufenes Zertifikat ungültig?
+- Was ist eine Certificate Chain?
+- Was ist ein Hash-Algorithmus?
+- Was versteht man unter einer CA?
+- Welche Aufgaben hat eine CA?
 
