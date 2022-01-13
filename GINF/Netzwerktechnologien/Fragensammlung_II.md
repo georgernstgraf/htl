@@ -1,30 +1,52 @@
-# Vorbereitung NW Test 2
+# Fragensammlung Netzwerktechnologien Teil 2
 
-- Was ist DNS
-- Was ist NTP
-- Was ist ein Socket?
+## Whois
 
-## Welche Informationen können mittels "whois" abgefragt werden?
+Welche Informationen können mittels "whois" abgefragt werden?
 
-## Wofür steht NTP?
+## Organisationen
 
-## Was bedeutet "Stratum" im Zusammenhang mit NTP?
+Welche Organsiation verwaltet die Vergabe von IP-Ranges (Subnets) in Europa?  
+Ein Land beschließt, keine Sommerzeit mehr zu machen. Welche Organisation muß die Verwaltung dieses Landes
+informieren?
 
-## Ist ein niedrieger oder ein hoher Stratum-Wert Anzeichen einer sehr guten Zeitquelle?
+## NTP
 
-## Was ist eine Zeitquelle und welche kennen Sie?
+Wofür steht NTP?  
+Was bedeutet "Stratum" im Zusammenhang mit NTP?  
+Ist ein niedrieger oder ein hoher Stratum-Wert Anzeichen einer sehr guten Zeitquelle?  
+Was ist eine Zeitquelle und welche kennen Sie?  
+Welche Zeitgenauigkeiten ermöglicht NTP für Endgeräte üblicherweise? (Minuten, Sekunden, ms (Millisekunden), µs (Mikrosekunden) ns (Nanosekunden))  
+Wie viele Millisekunden dauert eine Sekunde?  
+Wie viele Millisekunden dauert eine Minute?  
+Wie viele Mikrosekunden dauert eine Sekunde?  
+Wie viele Nanosekunden dauert eine Millisekunde?  
+Wie wird die Umstellung von Winterzeit auf Sommerzeit in NTP durchgeführt?  
+Gibt es in der NTP-Zeit Sommerzeit, Winterzeit, und Schaltjahre?  
+Gibt es in der NTP-Zeit *Sprünge*?  
+Die NTP-Zeit ist ja im ganzen Internet überall die gleiche. Wodurch ist es trotzdem möglich, daß unsere Rechner und Handys die europäische Zeit haben,
+obwohl sie ja mit NTP synchronisiert sind?  
 
-## Welche Zeitgenauigkeiten ermöglicht NTP für Endgeräte üblicherweise?
 
-(Größenordnung reicht) 1 Minute 1 Sekunde 1 ms, 1µs 1ns
+## IP / UDP / TCP
 
-### Wie viele Millisekunden dauert eine Sekunde?
+Was versteht man unter einem Socket?  
+Wie viele Sockets werden für eine Netzwerkverbindung benötigt?  
+Was versteht man unter einem *socketpair*? Begründen Sie Ihre Antwort!
+Was verstehen Sie unter einem *UDP Port*? Erläutern Sie!  
+Was verstehen Sie unter einem *TCP Port*?  Erläutern Sie!  
+Wie lautet die größtmögliche IP-Port-Nummer?  
+Was kann man mit dem Programm *wireshark* machen?
 
-### Wie viele Mikrosekunden dauert eine Sekunde?
+## DNS
 
-### Wie viele Millisekunden dauert eine Minute?
-
-### Wie viele Nanosekunden dauert eine Millisekunde
+Was ist der Unterschied zwischen einem "autoritativen" und einem "rekursiven" DNS-Server?  
+Beim Verbinden Ihres Handys mit einem WLAN kriegt es u.A. die IP-Adresse eines DNS-Servers. Ist dieser
+*rekursiv* oder *autoritativ*?  
+Was versteht man unter einem DNS-Root-Server?  
+Ist ein DNS-Root-Server *rekursiv* oder *autoritativ*?  
+Erklären Sie, warum man DNS als eine *hierarchische Datenbank* bezeichnet!  
+Was verstehen Sie unter dem Begiff "Delegation" im Zusammenhang mit DNS?  
 
 ## Fragen zu VPN
 

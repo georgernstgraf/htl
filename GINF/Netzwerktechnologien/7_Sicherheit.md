@@ -8,16 +8,20 @@ Sicherheitsaspekte:
 
 ## Verfügbarkeit
 
-[https://de.wikipedia.org/wiki/Verfügbarkeit](https://de.wikipedia.org/wiki/Verf%C3%BCgbarkeit)
-SLA [https://de.wikipedia.org/wiki/Service-Level-Agreement](https://de.wikipedia.org/wiki/Service-Level-Agreement)
-24/7
+Verfügbarkeit [https://de.wikipedia.org/wiki/Verfügbarkeit](https://de.wikipedia.org/wiki/Verf%C3%BCgbarkeit)  
+24/7 [https://de.wikipedia.org/wiki/Hochverf%C3%BCgbarkeit](https://de.wikipedia.org/wiki/Hochverf%C3%BCgbarkeit)  
+SLA [https://de.wikipedia.org/wiki/Service-Level-Agreement](https://de.wikipedia.org/wiki/Service-Level-Agreement)  
+stabile Betriebssysteme erhöhen die Verfügbarkeit.
 
-- Redundanz
-  - DNS round robin, Bsp: google MX, at.pool.ntp.org
-  - ha-proxy (mehrere Backend-Server)
-- Begriff des "single point of failure", muß genau analysiert werden, oft werden die übersehen  
-- anycast (eine IP, viele Server)
-- stabile Betriebssysteme
+### Redundanz
+
+Redundanz meint das Gegenteil des Begriffes des "single point of failure". Oft ist es nicht sofort ersichtlich,
+dass z.B. die Stromversorgung so ein single point ist. Rechenzentren tragen dem Rechnung durch Akkus und Notstromaggregate.
+Es muß genau analysiert werden, was alles redundant ausgelegt werden muß, um hochverfügbar zu sein.
+
+- DNS round robin, Bsp: google MX, at.pool.ntp.org (ein Hostname -> mehrere IPs)
+- ha-proxy (mehrere Backend-Server)
+- anycast (eine IP, viele Server) (Netzwerk-Schnickschnack ist beteiligt)
 
 ## Sicherheit vor Einbruch und Datendiebstahl
 
