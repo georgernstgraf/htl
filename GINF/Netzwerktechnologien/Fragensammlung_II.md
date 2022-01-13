@@ -27,7 +27,6 @@ Gibt es in der NTP-Zeit *Sprünge*?
 Die NTP-Zeit ist ja im ganzen Internet überall die gleiche. Wodurch ist es trotzdem möglich, daß unsere Rechner und Handys die europäische Zeit haben,
 obwohl sie ja mit NTP synchronisiert sind?  
 
-
 ## IP / UDP / TCP
 
 Was versteht man unter einem Socket?  

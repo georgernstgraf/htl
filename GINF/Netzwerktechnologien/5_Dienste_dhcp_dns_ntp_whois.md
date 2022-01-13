@@ -119,3 +119,7 @@ Der whois Dienst gibt Auskunft über rechtliche und natürliche Personen, welche
 - IP-Blöcke
 
 gehören.
+
+## VPN
+
+Siehe Dokument 7_Sicherheit.

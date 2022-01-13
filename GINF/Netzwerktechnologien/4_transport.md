@@ -41,7 +41,10 @@ Auf Deutsch etwa "Steckdose". Siehe [https://de.wikipedia.org/wiki/Socket_(Softw
 IP Sockets gibt es als UDP-Sockets und TCP-Sockets.  
 Ein Socket ist die Kombination (IP-Adresse:Port).  
 Der Port ist ein 16bit-Integer und kann somit die Werte 0-65535 annehmen.  
-Eine TCP (oder UDP) *Connection* besteht aus je einem Socket am Server und einem Socket am Client, welche miteinander verbunden sind (engl. socket-pair).
+Eine TCP (oder UDP) *Connection* besteht aus je einem Socket am Server und einem Socket am Client, welche miteinander verbunden sind (engl. socket-pair).  
+Ein Server hat für jeden bereitgestellten Dienst einen eigenen "listen Port". Man kann sich das wie eine Gegensprechanlage vorstellen mit mehreren Türen (Ports)
+an einer Adresse.  
+Standard-Portnummern (zB 80:http 443:https 123:ntp 53:dns 443:https 25:smtp) sind der Datei `/etc/services` zu entnehmen.
 
 ## Werkzeuge
 

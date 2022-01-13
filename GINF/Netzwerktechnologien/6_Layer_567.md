@@ -20,7 +20,7 @@ Gesicht und Lippen ist ein "Service" des Layer 5. Man kann "wiedereinsteigen". E
 - Authentisierung (authentication): Feststellung, daß jemand tatsächlich derjenige ist, der behauptet wird, es zu sein.
 - Authorisierung: Definition was ein Benutzer einer Applikation machen darf oder nicht. Beispiel in einem CMS unterschiedliche Rollen: Leser / Autor / Admin. Merkhilfe: You are not authorized. Also: DU darfst das nicht. Das, WER Du bist, wurde bereits festgestellt.
 - L2TP (ist gleich VPN - Virtual private Network)
-- RPC / XML-RPC Remote Procedure Call / json / 
+- RPC / XML-RPC Remote Procedure Call / json
 
 ## Layer 6 - Präsentation
 
