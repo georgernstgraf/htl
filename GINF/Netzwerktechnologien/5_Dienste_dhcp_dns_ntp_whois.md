@@ -33,10 +33,7 @@ $ host 193.170.108.20
 20.108.170.193.in-addr.arpa domain name pointer mailgate.spengergasse.at.
 ```
 
-Im o.g. Beispiel wird der - über DHCP bekanntgegebene - DNS Server "gebeten", die Antwort zu suchen. Ein derart konfiguriert arbeitender DNS-Server
-wird auch DNS-Cache oder *recursive Resolver* genannt. Der Cache fängt initial mit einer öffentlich bekannten Liste aller DNS-Root-Server an und
-muß für diese Suche nun die DNS-Hierarchie "abklappern", wie in folgendem Beispiel, wo
-dieses "Abklappern" von Hand durchgeführt wird:
+Im o.g. Beispiel wird der - über DHCP bekanntgegebene - DNS Server "gebeten", die Antwort zu suchen. Ein derart konfiguriert arbeitender DNS-Server wird auch DNS-Cache oder *recursive Resolver* genannt. Der Cache fängt initial mit einer öffentlich bekannten Liste aller DNS-Root-Server an und muß für diese Suche nun die DNS-Hierarchie "abklappern", wie in folgendem Beispiel, wo ich dieses "Abklappern" von Hand durchgeführe:
 
 ```text
 $ dig ns at @k.root-servers.net | grep d.ns.at  # k.root-servers.net ist ursprünglich bekannt
@@ -52,9 +49,14 @@ $ dig a www.spengergasse.at @ns5.univie.ac.at | egrep -v '^(;|$)'
 www.spengergasse.at.  300  IN  A  193.170.108.10
 ```
 
+Ein NS-Record (Name-Server-Record) informiert darüber, welcher Server für eine Domain (=Zone) autoritativ ist.
+
 DNS ist hierarchisch, ausgehend von sog. Root DNS Servern. Diese wissen die NS Records aller TLDs (Top-Level-Domains)
 wie zB. `.net` `.com` `.org` oder auch `.wien` oder `.at`. Diese widerum liefern dann die NS-Records, also welche Nameserver
-autoritative Auskünfte zu der Zone halten, also authoritativ für die von ihnen verwalteten Zonen ( = Domains) sind.
+autoritative Auskünfte zu der Zone halten, also authoritativ für die von ihnen verwalteten Zonen ( = Domains) sind.  
+Dieses "Weiterleiten von Autorität" (im Beispiel sagt der Root-Server: "Ein Nameserver für die Domain *.at* ist d.dns.at mit IP soundso." und dann sagt uns der "d.ns.at", "wenn Du was über *spengergasse.at* wissen willst, der autoritative Nameserver dafür ist *ns5.univie.ac.at* mit IP soundso").
+
+Dieses Weiterleiten von Autorität nennt man auch Delegation.
 
 DNS verwendet standardmäßig UDP Port 53, gelegentlich auch TCP Port 53.  
 [https://de.wikipedia.org/wiki/Root-Nameserver](https://de.wikipedia.org/wiki/Root-Nameserver)
@@ -67,6 +69,7 @@ Weltweite Verteilung von IPv4 Adressen (/8 Blöcke)
 Organisation des DNS-Namensraumes (root-nameserver)  
 Verwaltung der Zeitzonen-Files (lokales Offset, Sommer/Winterzeiten)  
 Betrieb des IANA-whois  
+Verwaltung von Standard-Portnummern (/etc/services) und Publikation dieser im RFC: [http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)  
 
 ICANN [https://de.wikipedia.org/wiki/Internet_Corporation_for_Assigned_Names_and_Numbers](https://de.wikipedia.org/wiki/Internet_Corporation_for_Assigned_Names_and_Numbers)
 
@@ -110,6 +113,12 @@ NTP ist ein ausgeklügeltes Time-Sync Protokoll, es berücksichtigt u.A.
 *Ntp Pools* sind öffentlich nutzbare Zeitquellen, welche von unterschiedlichen Organsiationen zur Verfügung gestellt werden, z.B. *pool.ntp.org*.  
 Genauigkeit von ca. 10ms für jeden Rechner im Internet wird durch ntp möglich.  
 Durch Rubidium-Quarze als lokale Taktgeber können Genauigkeiten im einstelligen μs (micro- bzw. millionstel Sekunden) -Bereich erreicht werden.
+
+![Grafik Stratum](https://www.rntrust.ae/sites/default/files/images/rntrust-ntp-highavailability.png)
+
+Wie ist nun möglich, dass wir auf unseren Rechner die österreichische Zeit angezeigt bekommen?: Beim Installieren wird ja eine Zeitzone festgelegt, z.B. `Europe/Vienna`, `Indian/Maldives` oder `America/Detroit`. Das Betriebssystem kann aus der UTC (die hat es wegen NTP) und dem Zeitzonen-File die aktuelle *localtime* ermitteln, inklusive der Sprünge bei Sommer/Winterzeit-Umstellung.
+
+Die sog. "Zone Database" wird von der IANA verwaltet. [http://www.iana.org/time-zones](http://www.iana.org/time-zones). Wenn Länder da etwas ändern, sollten sie es dort einmelden, sonst werden die Computer nix von der Änderung mitbekommen.
 
 ## Whois
 

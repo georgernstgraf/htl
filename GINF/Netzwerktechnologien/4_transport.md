@@ -9,7 +9,7 @@ Andere Begriffe dafür:
 ## UDP (User Datagram Protocol)
 
 - [Auf Wikipedia](https://de.wikipedia.org/wiki/User_Datagram_Protocol)
-- Wichtig: Konzept von Ports
+- Wichtig: Konzept von Ports (s.u. bei Sockets)
 - *Keine gesicherte Datenübertragung*, aber dafür sehr simples Protokoll
 - z.B. IP-Telefonie (Pakete können verloren gehen, dann schlechte Qualität)
 - DNS Dienst: hauptsächlich UDP
@@ -39,11 +39,11 @@ Andere Begriffe dafür:
 
 Auf Deutsch etwa "Steckdose". Siehe [https://de.wikipedia.org/wiki/Socket_(Software)](https://de.wikipedia.org/wiki/Socket_(Software)).  
 IP Sockets gibt es als UDP-Sockets und TCP-Sockets.  
-Ein Socket ist die Kombination (IP-Adresse:Port).  
+Ein Socket ist die Kombination (IP-Adresse:Port). Dadurch können mehrere Netzwerkverbindungen gleichzeitig bei nur einer IP Adresse realisiert werden.  
 Der Port ist ein 16bit-Integer und kann somit die Werte 0-65535 annehmen.  
-Eine TCP (oder UDP) *Connection* besteht aus je einem Socket am Server und einem Socket am Client, welche miteinander verbunden sind (engl. socket-pair).  
-Ein Server hat für jeden bereitgestellten Dienst einen eigenen "listen Port". Man kann sich das wie eine Gegensprechanlage vorstellen mit mehreren Türen (Ports)
-an einer Adresse.  
+*programmiertechnisch* ist ein Socket ein Objekt, oder "handle", wie ein File-Handle, aus dem das Programm lesen und wohin es auch schreiben kann.  
+Eine TCP (oder UDP) *Connection* (also Netzwerkverbindung) besteht aus je einem Socket am Server und einem Socket am Client, welche miteinander verbunden sind (engl. socket-pair).  
+Ein Server hat für jeden bereitgestellten Dienst einen eigenen "listen Port". Man kann sich das wie eine Gegensprechanlage vorstellen mit mehreren Türen (Ports) an einer Adresse.  
 Standard-Portnummern (zB 80:http 443:https 123:ntp 53:dns 443:https 25:smtp) sind der Datei `/etc/services` zu entnehmen.
 
 ## Werkzeuge

@@ -90,9 +90,10 @@ Man In The Middle
 - aktiv relevant bei DNS-Spoofing und Cache-Poisoning
 
 Symmetrische Kryptographie (AES, DES): Es gibt **einen** Schlüssel, der zum Verschlüsseln **und** Entschlüsseln verwendet wird.  
-Vorteil: Schnelle Algorithmen, Stromchiffren, dieser wird über ein asymmetrisches Verfahren ausgehandelt.
+Vorteil: Schnelle Algorithmen, Stromchiffren, dieser wird über ein asymmetrisches Verfahren ausgehandelt.  
+Nachteil: Beide Verbindungspartner müssen den symmetrischen Schlüssel kennen, jedoch darf ihn *sonst niemand* wissen.
 
-Asymmetrische Kryptographie (RSA, DH): Jeder Partner hat ein Schlüssel**paar**, einer öffentlich, einer privat.
+Asymmetrische Kryptographie (RSA, DH): Jeder Partner hat ein Schlüssel**paar**, davon ist einer öffentlich, einer privat.
 
 - Vorteile
   - public/private Keys
@@ -100,6 +101,8 @@ Asymmetrische Kryptographie (RSA, DH): Jeder Partner hat ein Schlüssel**paar**,
 - Nachteile  
   - hoher Rechenaufwand
   - nicht geeignet zur Verschlüsselung großer Datenmengen
+- Zweck:
+  - Asymmetrische Crypto wird verwendet, um gemeinsam mit dem Partner auf einen symmetrischen Schlüssel zu kommen, den sonst niemand weiß.
 
 Tools
 
@@ -114,3 +117,22 @@ Sind so etwas wie ein "digitaler Ausweis", enthalten einige digital signierte In
 - subject (also "Betreff" des Zertifikates)
 - Gültigkeitszeitraum
 - erlaubte Verwendungszwecke
+
+Es gibt etliche weltweit annerkannte "Root CA's" (Certificate Authorities). Bei diesen Zertifikaten ist *immer* der Issuer und das Subject identisch, das heißt maW. "self-signed". Diese Root-CA's sind in jedem Browser eingebaut. Diese haben oft eine Gültigkeitsdauer von einigen Dutzend Jahren.
+
+Die Root CA's erstellen meistens weitere CA Zertifikate, diese CA's werden "Sub-CA's" genannt.
+
+Diese Sub-CA's stellen Server- und Endbenutzer-Zertifikate aus.
+
+Ein Zertifikat ist *immer* nur mit einem dazugehörigen *key* verwendbar (anzeigen und auslesen kann man den öffentlichen Teil aber immer).
+
+### Aufgaben einer CA
+
+- Erstellung von Zertifikaten
+  - Server Certs
+  - Client Certs
+  - CA Certs
+- Pflegen von CRL's (Certificate Revocation List) und anbieten zum Download
+  - anderes Protokoll: OCSP
+
+Was ist eine CRL?: Eine Liste von Zertifikaten, welche verlorengegangen sind. Verloren heißt hier: Ich weiß (oder vermute), dass das Zertifikat und der dazugehörige Schlüssel in bösartige Hände geraten sind. Das melde ich der CA, und diese nimmt das Zertifikat in die CRL heinein. Jeder Browser der CRLs kontrolliert, weiß anhand dessen, dass dieses Cert dadurch ungültig geworden ist und verhindert das Verwenden einer Website mit diesem Zertifikat.

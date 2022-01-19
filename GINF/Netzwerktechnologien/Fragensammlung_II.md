@@ -27,13 +27,14 @@ Die NTP-Zeit ist ja im ganzen Internet überall die gleiche. Wodurch ist es trot
 
 ## IP / UDP / TCP
 
-Was versteht man unter einem Socket?  
+Was versteht man unter einem Socket? Wofür braucht man das?  
 Wie viele Sockets werden für eine Netzwerkverbindung benötigt?  
 Was versteht man unter einem *socketpair*? Begründen Sie Ihre Antwort!
-Was verstehen Sie unter einem *UDP Port*? Erläutern Sie!  
-Was verstehen Sie unter einem *TCP Port*?  Erläutern Sie!  
+Was verstehen Sie beim Thema IP unter einem *Port*? Erläutern Sie!  
+Wodurch unterscheiden sich UDP und TCP im Wesentlichen?  
 Wie lautet die größtmögliche IP-Port-Nummer?  
 Was kann man mit dem Programm *wireshark* machen?
+Welche Organisation verwaltet Standard-Portnummern?  
 
 ## DNS
 
@@ -43,6 +44,7 @@ Was versteht man unter einem DNS-Root-Server?
 Ist ein DNS-Root-Server *rekursiv* oder *autoritativ*?  
 Erklären Sie, warum man DNS als eine *hierarchische Datenbank* bezeichnet!  
 Was verstehen Sie unter dem Begiff "Delegation" im Zusammenhang mit DNS?  
+Auf welchem Standard-Port ist das DNS-Service erreichbar?  
 
 ## Fragen zu VPN
 
@@ -69,4 +71,6 @@ Was ist ein Hash-Algorithmus?
 Was versteht man unter einer CA?
 Welche Aufgaben hat eine CA?
 Woher kann man ein digitales Zertifikat bekommen?
-
+Wie heißt das wichtigste Opensource-Werkzeug rund um das Thema Kryptographie?  
+Könnte man theoretisch mit openssl eine Certificate Authority implementieren?  
+Was versteht man unter dem Terminus "security by obscurity"?  
