@@ -44,7 +44,7 @@ Der Port ist ein 16bit-Integer und kann somit die Werte 0-65535 annehmen.
 *programmiertechnisch* ist ein Socket ein Objekt, oder "handle", wie ein File-Handle, aus dem das Programm lesen und wohin es auch schreiben kann.  
 Eine TCP (oder UDP) *Connection* (also Netzwerkverbindung) besteht aus je einem Socket am Server und einem Socket am Client, welche miteinander verbunden sind (engl. socket-pair).  
 Ein Server hat für jeden bereitgestellten Dienst einen eigenen "listen Port". Man kann sich das wie eine Gegensprechanlage vorstellen mit mehreren Türen (Ports) an einer Adresse.  
-Standard-Portnummern (zB 80:http 443:https 123:ntp 53:dns 443:https 25:smtp) sind der Datei `/etc/services` zu entnehmen.
+Standard-Portnummern (zB 80:http 443:https 123:ntp 53:dns 443:https 25:smtp) sind der Datei `/etc/services` zu entnehmen und werden von der IANA verwaltet.
 
 ## Werkzeuge
 
