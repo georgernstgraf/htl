@@ -4,25 +4,16 @@ Wie heißen die 7 Schichten des OSI Modelles und was bedeuten sie?
 
 ## Basics (\*plex, physisch, Ether)
 
-erkläre einen der Begriffe simplex, halbduplex, volldumplex, multiplex
-
-welche physischen medien kennen sie?
-
-Nennen Sie ungefähre Übertragungs-Reichweiten für kabelgebundene Netzwerke!
-
-Nennen Sie ungefähre Übertragungs-Reichweiten für Funknetze!
-
-Nennen Sie ungefähre Übertragungs-Reichweiten für Glasfaser Datenleitungen!
-
-Nennen Sie ungefähre Übertragungs-Reichweiten für Richtfunkverbindungen.
-
-Was bedeutet die "MAC" Adressse?
-
-Ist anhand einer MAC Adresse die Herstellerfirma der Netzwerkkarte feststellbar?
-
-Wie kann anhand einer MAC Adresse die Herstellerfirma der Netzwerkkarte ausfindig gemacht werden?
-
-nenne 4 hardware netzwerkkomponenten - Erkläre die Funktionen des jeweiligen Gerätes.
+erkläre einen der Begriffe simplex, halbduplex, volldumplex, multiplex  
+welche physischen medien kennen sie?  
+Nennen Sie ungefähre Übertragungs-Reichweiten für kabelgebundene Netzwerke!  
+Nennen Sie ungefähre Übertragungs-Reichweiten für Funknetze!  
+Nennen Sie ungefähre Übertragungs-Reichweiten für Glasfaser Datenleitungen!  
+Nennen Sie ungefähre Übertragungs-Reichweiten für Richtfunkverbindungen.  
+Was bedeutet die "MAC" Adressse?  
+Ist anhand einer MAC Adresse die Herstellerfirma der Netzwerkkarte feststellbar?  
+Wie kann anhand einer MAC Adresse die Herstellerfirma der Netzwerkkarte ausfindig gemacht werden?  
+nenne 4 hardware netzwerkkomponenten - Erkläre die Funktionen des jeweiligen Gerätes.  
 
 wieviele bytes hat eine ethernet-Adresse?
 
