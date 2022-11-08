@@ -82,51 +82,54 @@ Was ist die Besonderheit von TCP gegenüber "reinem Layer 3"? (2 P.)
 
 Auf welcher Schichte des OSI Modelles ist TCP angesiedelt? (2 P.)
 
-aus wievielen bytes besteht eine IP Adresse?
+aus wievielen bytes besteht eine IP Adresse? (1 P.)
 
-Was ist ein IP Subnetz?
+Was ist ein IP Subnetz? (3 P.)
 
-Was ist eine IP Subnetzmaske und welche Schreibweisen dieser Maske kennen Sie?
+Was ist eine IP Subnetzmaske und welche Schreibweisen dieser Maske kennen Sie? (3 P.)
 
-Erklären Sie die Begriffe Class A, Class B, Class C
+Erklären Sie die Begriffe Class A, Class B, Class C (3 P.)
 
-Wie lautet eine alternative Schreibweise für die Subnetmask `/24`?
+Wie lautet eine alternative Schreibweise für die Subnetmask `/24`? (1 P.)
 
-Wie lautet eine alternative Schreibweise für die Subnetmask `255.255.0.0`?
+Wie lautet eine alternative Schreibweise für die Subnetmask `255.255.0.0`? (1 P.)
 
-Was ist die Aufgabe des "default gateways"?
+Was ist die Aufgabe des "default gateways"? (2 P.)
 
 ### Beispiele von Rechenaufgaben zum Thema Subnetting
 
 Gegeben ist das Netz 10.0.0.0/8:
 
-- Ist die IP 10.23.54.192 in dem geg. Netz?
-- Ist die IP 23.10.192.24 in dem geg. Netz?
-- Wie viele IP Adressen sind in diesem Netz möglich?
-- wie viele Subnetze der Größe `/24` (oder `/16`) sind in diesem Netz möglich?
+- Ist die IP 10.23.54.192 in dem geg. Netz? (1 P.)
+- Ist die IP 23.10.192.24 in dem geg. Netz? (1 P.)
+- Wie viele IP Adressen sind in diesem Netz möglich? (3 P.)
+- wie viele Subnetze der Größe `/24` (oder `/16`) sind in diesem Netz möglich? (3 P.)
 
 Gegeben ist das Netz 192.168.23.0/24:
 
-- Ist die IP 192.168.23.23 in dem geg. Netz?
-- Ist die IP 192.168.189.23 in dem geg. Netz?
-- Wie viele IP Adressen sind in diesem Netz möglich?
+- Ist die IP 192.168.23.23 in dem geg. Netz? (1 P.)
+- Ist die IP 192.168.189.23 in dem geg. Netz? (1 P.)
+- Wie viele IP Adressen sind in diesem Netz möglich? (2 P.)
 
 Gegeben ist das Netz 78.41.112.0 - 78.41.112.255:
 
-- wie lautet die Schreibweise für das Netz mit "/"
-- wie lautet die Schreibweise für das Netz mit *ausgeschriebener* Netzmaske?
+- wie lautet die Schreibweise für das Netz mit "/" (2 P.)
+- wie lautet die Schreibweise für das Netz mit *ausgeschriebener* Netzmaske? (2 P.)
+- schreiben Sie dieses Netz inklusive Netzmaske in *beiden* besprochenen Notationsweisen. (3 P.)
 
-Ein PC hat folgende Netzwerk Konfiguration (3 P.):
+Ein PC hat folgende Netzwerk Konfiguration:
 `inet 10.92.51.185 netmask 255.255.0.0`.
 
-- Wie lautet das Netzwerk in der Schreibweise a.b.c.d/e?
-- Wie lautet die niedrigste und wie die höchste mögliche IP Adresse in dem Netz?
-- Welche davon dürfen nicht an Netzwerkgeräte vergeben werden?
+- Wie lautet das Netzwerk in der Schreibweise a.b.c.d/e? (1 P.)
+- Wie lautet die niedrigste und wie die höchste mögliche IP Adresse in dem Netz? (2 P.)
+- Welche davon dürfen nicht an Netzwerkgeräte vergeben werden? (1 P.)
 
 ### Infrastruktur - Dienste:
 
-Was bedeutet dhcp?
+Was bedeutet dhcp? (1 P.)
 
-welche Probleme löst dhcp? Welche Informationen teilt der Server dem Client mit (mind. 3 Antworten)
+welche Probleme löst dhcp? (2 P.)
 
-was heißt DNS und was wird dadurch möglich?
+Welche Informationen teilt der Server dem Client mit? maximal erreichbar (5 P.)
+
+was heißt DNS und was wird dadurch möglich? (2 P.)
