@@ -2,81 +2,85 @@
 
 ## Rechnerische Grundlagen
 
-Wieviel Byte sind `(3 Tebibyte - 1000 Gibibyte)`?
+Wieviel Byte sind `(3 Tebibyte - 1000 Gibibyte)`? (3 P.)
 
-10 Pbit/s sind wieviele Gbit/s?
+10 Pbit/s sind wieviele Gbit/s? (2 P.)
 
-Gegeben ist folgende Binärzahl: `"10011101"`. Stellen Sie diese Zahl in dezimaler sowie in hexadezimaler Schreibweise dar!
+Gegeben ist folgende Binärzahl: `"10011101"`. Stellen Sie diese Zahl in dezimaler sowie in hexadezimaler Schreibweise dar! (3 P.)
 
 ## Layer 1 und 2 (\*plex, physisch, Ether)
 
-Wie heißen die 7 Schichten des OSI Modelles und was bedeuten sie?
+Wie heißen die 7 Schichten des OSI Modelles und was bedeuten sie? (3 P.)
 
-Erkläre einen der Begriffe simplex, halbduplex, volldumplex, multiplex!
+Erklären Sie den Begriff simplex! (2 P.)
 
-In welcher Einheit wird die Bandbreite einer Datenleitung gemessen?
+Erklären Sie den Begriff halbduplex (2 P.)
 
-Welche physischen Medien kennen sie?  
+Erklären Sie den Begriff volldumplex (2 P.)
 
-Nennen Sie ungefähre Übertragungs-Reichweiten für kabelgebundene Netzwerke!
+Erklären Sie den Begriff multiplex! (3 P.)
 
-Nennen Sie ungefähre Übertragungs-Reichweiten für Funknetze!
+In welcher Einheit wird die Bandbreite einer Datenleitung gemessen? (2 P.)
 
-Nennen Sie ungefähre Übertragungs-Reichweiten für Glasfaser Datenleitungen!
+Welche physischen Medien kennen sie? (3 P.)
 
-Welches Trägermaterial ermöglicht auf eine Distanz von 1km 10Pbit/s (Peta-Bit pro Sekunde)?
+Nennen Sie ungefähre Übertragungs-Reichweiten für kabelgebundene Netzwerke! (1 P.)
 
-Nennen Sie ungefähre Übertragungs-Reichweiten für Richtfunkverbindungen.
+Nennen Sie ungefähre Übertragungs-Reichweiten für Funknetze! (1 P.)
 
-Was bedeutet die "MAC" Adressse?
+Nennen Sie ungefähre Übertragungs-Reichweiten für Glasfaser Datenleitungen! (1 P.)
 
-Wieviele Bytes hat eine Ethernet Adresse?
+Welches Trägermaterial ermöglicht auf eine Distanz von 1km 10Pbit/s (Peta-Bit pro Sekunde)? (1 P.)
 
-Was ist der Unterschied zwischen einer MAC Adresse und einer Ethernet Adresse?
+Nennen Sie ungefähre Übertragungs-Reichweiten für Richtfunkverbindungen. (1 P.)
 
-Wie viele Hexadezimalzahlen benötigt man, um eine MAC Adresse darzustellen?
+Was bedeutet die "MAC" Adressse? (2 P.)
 
-Ist anhand einer MAC Adresse die Herstellerfirma der Netzwerkkarte feststellbar?
+Wieviele Bytes hat eine Ethernet Adresse? (1 P.)
 
-Wie kann anhand einer MAC Adresse die Herstellerfirma der Netzwerkkarte ausfindig gemacht werden?
+Was ist der Unterschied zwischen einer MAC Adresse und einer Ethernet Adresse? (1 P.)
 
-Nennen Sie vier verschiedene Hardware Netzwerkkomponenten.
+Wie viele Hexadezimalzahlen benötigt man, um eine MAC Adresse darzustellen? (2 P.)
 
-Erklären Sie die Funktion des jeweiligen Gerätes.  
+Ist anhand einer MAC Adresse die Herstellerfirma der Netzwerkkarte feststellbar? (2 P.)
 
-Erklären Sie die Aufgabe und Funktionsweise einer Netzwerk "Bridge".
+Wie kann anhand einer MAC Adresse die Herstellerfirma der Netzwerkkarte ausfindig gemacht werden? (2 P.)
 
-Erklären Sie die Aufgabe und Funktionsweise eines Hubs.
+Nennen Sie vier verschiedene Hardware Netzwerkkomponenten. (4 P.)
 
-Erklären Sie die Aufgabe und Funktionsweise eines Switches.
+Erklären Sie die Aufgabe und Funktionsweise einer Netzwerk "Bridge". (3 P.)
 
-Erklären Sie die Aufgabe und Funktionsweise eines Routers.
+Erklären Sie die Aufgabe und Funktionsweise eines Hubs. (3 P.)
 
-Gibt es in einem WLAN ebenfalls Ethernet Adressen?
+Erklären Sie die Aufgabe und Funktionsweise eines Switches. (3 P.)
 
-Welche Technologie löst in heutigen kabelgebundenen Netzwerken das Problem von Signalkollisionen?
+Erklären Sie die Aufgabe und Funktionsweise eines Routers. (3 P.)
+
+Gibt es in einem WLAN ebenfalls Ethernet Adressen? (1 P.)
+
+Welche Technologie löst in heutigen kabelgebundenen Netzwerken das Problem von Signalkollisionen? (2 P.)
 
 ### Layer 3 und 4 .. IP / UDP / TCP
 
-Erklären Sie den Unterschied zwischen einem Switch und einem Router!
+Erklären Sie den Unterschied zwischen einem Switch und einem Router! (3 P.)
 
-Ab welchem Layer des OSI Modelles können Datenpakete das lokale Netz verlassen?
+Ab welchem Layer des OSI Modelles können Datenpakete das lokale Netz verlassen? (1 P.)
 
-Was ist die Aufgabe von Routingprotokollen?
+Was ist die Aufgabe von Routingprotokollen? (2 P.)
 
-Wie viele Bytes hat eine IP Adresse?
+Wie viele Bytes hat eine IP Adresse? (1 P.)
 
-Was bedeutet IP?
+Was bedeutet IP? (1 P.)
 
-Können IP Pakete ein LAN verlassen?
+Können IP Pakete ein LAN verlassen? (1 P.)
 
-Können TCP Pakete ein LAN verlassen?
+Können TCP Pakete ein LAN verlassen? (1 P.)
 
-Was bedeutet TCP?
+Was bedeutet TCP? (1 P.)
 
-Was ist die Besonderheit von TCP gegenüber "reinem Layer 3"?
+Was ist die Besonderheit von TCP gegenüber "reinem Layer 3"? (2 P.)
 
-Auf welcher Schichte des OSI Modelles ist TCP angesiedelt?
+Auf welcher Schichte des OSI Modelles ist TCP angesiedelt? (2 P.)
 
 aus wievielen bytes besteht eine IP Adresse?
 
