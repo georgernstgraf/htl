@@ -2,39 +2,46 @@
 
 ## Whois
 
-Welche Informationen können mittels "whois" abgefragt werden?
+Welche Informationen können mittels "whois" abgefragt werden? (Daten zu einer Person einer Domain. Eigentümer, Standort,
+Nameserver, Registrar. Ebenso IP Adressen)
+
+Was bedeutet das Kürzel "AS" (Autonomes System)
+
 
 ## Organisationen
 
-Welche Organsiation verwaltet die Vergabe von IP-Ranges (Subnets) in Europa?  
-Ein Land beschließt, keine Sommerzeit mehr zu machen. Welche Organisation muß die Verwaltung dieses Landes informieren?
+Welche Organsiation verwaltet die Vergabe von IP-Ranges (Subnets) in Europa? (RIPE)
+Ein Land beschließt, keine Sommerzeit mehr zu machen. Welche Organisation muß die Verwaltung dieses Landes informieren? (IANA)
 
 ## NTP
 
-Wofür steht NTP?  
-Was bedeutet "Stratum" im Zusammenhang mit NTP?  
-Ist ein niedrieger oder ein hoher Stratum-Wert Anzeichen einer sehr guten Zeitquelle?  
-Was ist eine Zeitquelle und welche kennen Sie?  
-NTP ermöglicht eine Genauigkeit von welcher Größenordnung typischerweise für Endgeräte? (Minuten, Sekunden, ms (Millisekunden), µs (Mikrosekunden) ns (Nanosekunden))  
-Wie viele Millisekunden dauert eine Sekunde?  
-Wie viele Millisekunden dauert eine Minute?  
-Wie viele Mikrosekunden dauert eine Sekunde?  
-Wie viele Nanosekunden dauert eine Millisekunde?  
-Wie wird die Umstellung von Winterzeit auf Sommerzeit in NTP durchgeführt?  
-Gibt es in der NTP-Zeit Sommerzeit, Winterzeit, und Schaltjahre?  
-Gibt es in der NTP-Zeit *Sprünge*?  
-Die NTP-Zeit ist ja im ganzen Internet überall die gleiche. Wodurch ist es trotzdem möglich, daß unsere Rechner und Handys die europäische Zeit haben, obwohl sie ja mit NTP synchronisiert sind?  
+Wofür steht NTP? (Network Time Protocol)
+Wofür steht UTC? (Universal Time Coordinated)
+Welche Ports werden von NTP verwendet (TCP + UDP 123)
+Was bedeutet "Stratum" im Zusammenhang mit NTP? ("Abstand" .. wieviele Hops zur Atomuhr) 
+Ist ein niedrieger oder ein hoher Stratum-Wert Anzeichen einer sehr guten Zeitquelle?  (niedrig)
+Was ist eine Zeitquelle und welche kennen Sie? (GPS, Atomuhr) 
+NTP ermöglicht eine Genauigkeit von welcher Größenordnung typischerweise für Endgeräte? (Minuten, Sekunden, ms (Millisekunden), µs (Mikrosekunden) ns (Nanosekunden))  (Millisekunden)
+Wie viele Millisekunden dauert eine Sekunde? (1000) 
+Wie viele Millisekunden dauert eine Minute? (60_000) 
+Wie viele Mikrosekunden dauert eine Sekunde? (1_000_000) 
+Wie viele Nanosekunden dauert eine Millisekunde? (1000)
+Wie wird die Umstellung von Winterzeit auf Sommerzeit in NTP durchgeführt? (gar nicht!)
+Gibt es in der NTP-Zeit Sommerzeit, Winterzeit, und Schaltjahre? (nein!) 
+Gibt es in der NTP-Zeit *Sprünge*? Und falls ja, welche? (Ja, Schaltsekunde, alle 2-5 Jahre nötig) 
+Die NTP-Zeit ist ja im ganzen Internet überall die gleiche. Wodurch ist es trotzdem möglich, daß unsere Rechner und Handys die europäische Zeit haben, obwohl sie ja mit NTP synchronisiert sind? (Zeitzonen Dateien)
 
 ## IP / UDP / TCP
 
-Was versteht man unter einem Socket? Wofür braucht man das?  
-Wie viele Sockets werden für eine Netzwerkverbindung benötigt?  
-Was versteht man unter einem *socketpair*? Begründen Sie Ihre Antwort!
-Was verstehen Sie beim Thema IP unter einem *Port*? Erläutern Sie!  
-Wodurch unterscheiden sich UDP und TCP im Wesentlichen?  
-Wie lautet die größtmögliche IP-Port-Nummer?  
-Was kann man mit dem Programm *wireshark* machen?
-Welche Organisation verwaltet Standard-Portnummern?  
+Was versteht man unter einem Socket? Wofür braucht man das? (Kombination IP:Portnummer)
+Wie viele Sockets werden für eine Netzwerkverbindung benötigt? (2) 
+Was versteht man unter einem *socketpair*? Begründen Sie Ihre Antwort! (Wenn sich 2 Sockets verbinden)
+Was verstehen Sie beim Thema IP unter einem *Port*? Erläutern Sie! (Adresse eines Dienstes) 
+Wodurch unterscheiden sich UDP und TCP im Wesentlichen? (TCP ist sicherer und gibt Garantien, UDP ist schneller)
+Wie lautet die größtmögliche IP-Port-Nummer? (256^2-1 oder 0xFFFF oder 65535) 
+Was kann man mit dem Programm *wireshark* machen? (Netzwerktraffic analysieren)
+Welche Organisation verwaltet Standard-Portnummern? (IANA) 
+Was bedeutet das Kürzel IANA? (Internet Assigned Numbers Authority)
 
 ## DNS
 
@@ -57,7 +64,10 @@ Wofür seht das Kürzel NAT?
 Erklären Sie in einigen Sätzen die Funktionsweise von NAT
 Was versteht man unter "reverse NAT"? Erklären Sie in eigenen Worten!
 
-## Crypto
+## Sicherheit
+
+Was bedeutet Authentisierung? (System weiß, wer man ist, wer Du bist)
+Was bedeutet Autorisierung? (System erlaubt bestimmte Aktionen)
 
 Wodurch unterscheidet sich symmetrische von asymmetrischer Kryptographie?
 Welches Problem löst das Diffie-Helman Verfahren?
