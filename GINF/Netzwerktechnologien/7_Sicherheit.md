@@ -1,25 +1,34 @@
 # Netzwerksicherheit
 
-[https://de.wikipedia.org/wiki/Netzwerksicherheit](https://de.wikipedia.org/wiki/Netzwerksicherheit)
-Sicherheitsaspekte:
+[https://de.wikipedia.org/wiki/Netzwerksicherheit](https://de.wikipedia.org/wiki/Netzwerksicherheit)  
+## Sicherheitsaspekte:
 
-- Verfügbarkeit, Stabilität, Robustheit
+- Verfügbarkeit ( = Stabilität, Robustheit)
 - Einbruchssicherheit
+- Datensicherheit (Backups)
 
 ## Verfügbarkeit
 
-Verfügbarkeit [https://de.wikipedia.org/wiki/Verfügbarkeit](https://de.wikipedia.org/wiki/Verf%C3%BCgbarkeit)  
-24/7 [https://de.wikipedia.org/wiki/Hochverfügbarkeit](https://de.wikipedia.org/wiki/Hochverf%C3%BCgbarkeit)  
-SLA [https://de.wikipedia.org/wiki/Service-Level-Agreement](https://de.wikipedia.org/wiki/Service-Level-Agreement)  
+- Verfügbarkeit [https://de.wikipedia.org/wiki/Verfügbarkeit](https://de.wikipedia.org/wiki/Verf%C3%BCgbarkeit)  
+- [https://de.wikipedia.org/wiki/Hochverfügbarkeit](https://de.wikipedia.org/wiki/Hochverf%C3%BCgbarkeit)  
+- SLA [https://de.wikipedia.org/wiki/Service-Level-Agreement](https://de.wikipedia.org/wiki/Service-Level-Agreement)  
+- CAP-Theorem [https://de.wikipedia.org/wiki/CAP-Theorem](https://de.wikipedia.org/wiki/CAP-Theorem)
+
 Stabile Betriebssysteme erhöhen die Verfügbarkeit.
 
 ### Redundanz
 
-Redundanz meint das Gegenteil des Begriffes des "single point of failure". Oft ist es nicht sofort ersichtlich,
-dass z.B. die Stromversorgung so ein single point ist. Rechenzentren tragen dem Rechnung durch Akkus und Notstromaggregate.
-Es muß genau analysiert werden, was alles redundant ausgelegt werden muß, um hochverfügbar zu sein.  
-Manche single points of failure müssen je nach (finanziellen) Ressourcen in Kauf genommen werden.  
-Im Anschluss einige Konzepte:
+Redundant heißt "überflüssig" bzw. "mehrfach ausgelegt". Redundanz meint also
+das Gegenteil des Begriffes des "single point of failure". Oft ist es nicht
+sofort ersichtlich welche Komponenten eines Systems diese "single points" sein könnten.
+Beispiele: Stromversorgung, Netzwerkkabel, (Micro-)Services nur einfach vorhanden, Datenbank ..
+
+Rechenzentren tragen dem Rechnung durch Akkus und Notstromaggregate. Es muß
+genau analysiert werden, was alles redundant ausgelegt werden muß, um hochver-
+fügbar zu sein. Manche single points of failure müssen je nach (finanziellen)
+Ressourcen in Kauf genommen werden.
+
+Einige Konzepte:
 
 - DNS round robin (ein Hostname -> mehrere IPs): Bsp: google MX, at.pool.ntp.org 
 - ha-proxy (mehrere Backend-Server "hinter" einer IP)
@@ -27,18 +36,20 @@ Im Anschluss einige Konzepte:
 
 ## Sicherheit vor Einbruch und Datendiebstahl
 
-Problematik: Hin und wieder knackt ein Mathematiker einen crypto-Algorithmus, daher:  
+Problematik: Hin und wieder knackt ein Mathematiker einen crypto-Algorithmus. Immer wieder
+werden Softwarefehler gefunden, die Einbrüche erlauben.
 
-- regelmäßiges Patchen aller beteiligten Software-Komponenten
-- Inventory über Patch-Stände (eher junges Konzept, noch in den Kinderschuhen) in Kombination mit Vulnerability-Datenbanken
+- regelmäßiges Patchen aller (!) beteiligten Software-Komponenten
+- Vulnerability Datenbank CVE: [https://www.cve.org/](https://www.cve.org/)
+- Inventory über Patch-Stände (eher junges Konzept, noch in den Kinderschuhen) in Kombination mit Vulnerability-Datenbanken. 
 - Firewalls
-  - Layer 3 (Paketfilter, stateful)
+  - Layer 3 (Paketfilter, stateful) (geblockte Ports)
   - Layer 7 (deep inspection). Sog. Application-Level Firewalls, z.B. WAF (Web Application Firewall).  
 Problematik hier: SSL ist End-to-End verschlüsselt  
-- "Intrusion Avoidance"
+- "Intrusion Avoidance" .. mit KI 
 - schlecht konfigurierte Firewalls, oft schwierig zu debuggen
 
-Intrusion Detection
+### Intrusion Detection
 
 - KI wird eingesetzt, um Anomalien zu erkennen. Zentrales Logging Voraussetzung.
 2-factor authentication, Ausblick auf Layer 8
