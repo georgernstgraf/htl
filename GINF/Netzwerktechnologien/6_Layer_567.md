@@ -29,6 +29,8 @@ Wie bekommt die Applikation (L7) die Daten zu sehen, wie werden sie präsentiert
 - Zeichensatzes, aber auch der
 - Verschlüsselung und
 - Komprimierung
+	lossless
+	lossy 
 
 des Datenstroms gehören hier dazu.
 
