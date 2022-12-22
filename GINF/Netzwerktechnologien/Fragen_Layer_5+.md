@@ -18,23 +18,41 @@ Welche Informationen teilt ein DHCP Server dem Client mit? maximal erreichbar (5
 
 ## DNS
 
+Was bedeutet das Kürzel DNS?
+- Domain Name Service
+
 Was heißt DNS und was wird dadurch möglich? (2 P.)
+- Domain Name Service
 - Auflösung von Name zu IP Adresse
 - Auflösung von IP Adresse zu einem Hostnamen
 
-Was ist der Unterschied zwischen einem "autoritativen" und einem "rekursiven" DNS-Server?  
+Was ist der Unterschied zwischen einem "autoritativen" und einem "rekursiven" DNS-Server?
+- rekursiv: kommuniziert mit anderen (authoritativen) DNS Servern
+- rekursiv: Aufgabe ist, für Endgeräte Antworten zu finden
+- rekursive hat keine eigenen Daten ausser den DNS ROOT Server IP Adressen
+- authoritativ: Hat eigene Zonen (=Domain) Informationen
 
 Beim Verbinden Ihres Handys mit einem WLAN kriegt es u.A. die IP-Adresse eines DNS-Servers. Ist dieser *rekursiv* oder *autoritativ*?  
+- rekursiv
 
 Was versteht man unter einem DNS-Root-Server?  
+- authoritativ für alle NS-Einträge aller Top-Level-Domains, es gibt eine fixe Liste mit Root-Servern, 13 Stück
 
 Ist ein DNS-Root-Server *rekursiv* oder *autoritativ*?  
+- authoritativ
 
-Erklären Sie, warum man DNS als eine *hierarchische Datenbank* bezeichnet!  
+Erklären Sie, warum man DNS als eine *hierarchische Datenbank* bezeichnet!
+- Weil es eine Baumstruktur ist
+- Weil delegiert, also weitergeleitet wird
 
-Was verstehen Sie unter dem Begiff "Delegation" im Zusammenhang mit DNS?  
+Was bedeutet das Kürzel TLD?
+- Top Level Domain
+
+Was verstehen Sie unter dem Begiff "Delegation" im Zusammenhang mit DNS?
+- Die Information über NS-Einträge von einer Domain wird mitgeteilt.
 
 Auf welchem Standard-Port ist das DNS-Service erreichbar?  
+- 53 UDP
 
 ## Whois
 
@@ -48,7 +66,7 @@ Welche Informationen können mittels "whois" abgefragt werden? (4 P.)
 
 Was bedeutet das Kürzel "AS" und was bedeutet es? (2 P.)
 - Autonomes System
-- Eine Ansammlung von mehreren Netzen unter Verwaltung einer administrativen Entität
+- Eine Ansammlung von mehreren Netzen unter Verwaltung einer administrativen Instanz
 
 ## Organisationen
 
@@ -65,8 +83,11 @@ Was bedeutet das Kürzel IANA?
 - Internet Assigned Numbers Authority
 
 Welche Organisation betreut die Internet RFC's?
+- IETF Internet Engeneering Task Force
 
 Was sind Internet RFC's?
+- technische Spezifikationen für Internet Technologien
+- "Request for Comments"
 
 ## NTP
 
@@ -143,18 +164,24 @@ Was kann man mit dem Programm *wireshark* machen?
 ## Fragen zu VPN
 
 Nennen Sie zwei typische Problemstellungen, für welche VPN eine Lösung ist.
-- Intranet
-- Geo
+- Dem Internet Provider nicht verraten was man surft.
+- Zugriff auf Intranet wird von außen möglich. 
+- Zugriffe aus einem anderen Land simulieren, zB für Streaming Angebote
 
 Was wird in RFC 1918 festgelegt?
+- Welche Netze nicht im Internet erreichbar sind.
+- Adressen für privates Netzwerk
 
 ## Fragen zu NAT
 
 Wofür seht das Kürzel NAT?
+- Network Address Translation
 
 Erklären Sie in einigen Sätzen die Funktionsweise von NAT
+- NAT Router "versteckt" die privaten (RFC1819) Adressen hinter seiner eigenen offiziellen IP (tauscht aus)
 
 Was versteht man unter "reverse NAT"? Erklären Sie in eigenen Worten!
+- Wenn "hinter" einer offiziellen IP mehrere Server antworten sollen.
 
 ## Sicherheit
 
@@ -162,40 +189,62 @@ Was bedeutet Authentisierung?
 - System weiß, wer man ist, wer Du bist
 
 Was ist die so genannte Two-Factor Authentisierung?
+- zweifache Authentisierung, z.B. Email mit Link drinnen oder SMS mit Code.
 
 Was bedeutet Autorisierung?
-- System erlaubt bestimmte Aktionen
+- System erlaubt oder verbietet bestimmte Aktionen abhänging davon wer ich bin im System
+- Zuweisung von Rollen
 
 Wodurch unterscheidet sich symmetrische von asymmetrischer Kryptographie?
+- symmetrisch: Gleicher Schlüssel zum Ver- und Entschlüsseln
+- assymetrisch: Unterschiedliche Schlüssel zum Ver- und Entschlüsseln
 
 Welches Problem löst das Diffie-Helman Verfahren?
+- Dass beim Vereinbaren eines Schlüssel andere mithören.
 
 Ist das Diffie-Helman Verfahren der symmetrischen oder asymmetrischen Kryptographie zuzuordnen?
+- asymmetrisch, und ermittet einen sysmmetrischen Schlüssel
 
 Welche Informationen sind in Digitalen Zertifikaten enthalten?
+- Wer ist Ersteller
+- Wer ist Eigentümer
+- Gültigkeitszeitraum
 
-Welche besondere Eigenschaft hat ein Root-Zertifikat?
+Welche besondere Eigenschaft hat ein Root-Zertifikat? (Stammzertifikat)
+- Subject und Issuer sind gleich
 
 Kann ein Zertifikat abgelaufen sein (also nicht mehr gültig)?
+- Ja
 
 Unter welchen Umständen ist ein nicht abgelaufenes Zertifikat ungültig?
+- wenn es von der CA revoked wurde
 
 Was ist eine Certificate Chain?
+- Zwischen-CA's sind beteiligt
 
 Was ist ein Hash-Algorithmus?
+- Erzeugung von Prüfsummen
 
 Was versteht man unter einer CA?
+- Erzeugung von Zertifikaten
 
 Welche Aufgaben hat eine CA?
+- Erzeugung von Zertifikaten
+- Zuordnung zu Personen für Missbrauchsfälle
 
 Woher kann man ein digitales Zertifikat bekommen?
+- Vom Provider / einer CA
 
 Wie heißt das wichtigste Opensource-Werkzeug rund um das Thema Kryptographie?  
+- openssl
 
 Könnte man theoretisch mit openssl eine Certificate Authority selber bauen?
+- ja
 
 Was versteht man unter dem Terminus "security by obscurity"?  
+- Sicherheit durch Geheimhaltung der Algorithmen 
 
 Was besagt das Kerckhoff'sche Prinzip?
+- Nur die Geheimnisse sollen sicher sein, die Algorithmen öffentlich
 
 
