@@ -1,5 +1,7 @@
 ALL != ls *.md | awk '{printf "%s.pdf ", substr($$0, 1, length($$0)-3);}'
 
+defalt: $(ALL)
+
 %.pdf: %.md
 	mypandoc $<
 

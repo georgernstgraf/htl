@@ -53,7 +53,11 @@ Problematik hier: SSL ist End-to-End verschlüsselt
 ### Intrusion Detection
 
 - KI wird eingesetzt, um Anomalien zu erkennen. Zentrales Logging Voraussetzung.
+
+### Authentisierung und Authorisierung
+
 2-factor authentication, Ausblick auf Layer 8
+
 Unterscheidung Authenticaton / Authorization
 - merke: Georg (authenticated) -> "is not authorized" (permission denied)
 
@@ -139,7 +143,7 @@ Man In The Middle
 
 - entweder "rein passiv" oder
 - aktiv (ändert Pakete oder gibt sich als einer der 2 Partner aus)
-- aktiv relevant bei DNS-Spoofing und Cache-Poisoning
+Aktiv relevant bei DNS-Spoofing und Cache-Poisoning
 
 Symmetrische Kryptographie (AES, DES): Es gibt **einen** Schlüssel, der zum
 Verschlüsseln **und** Entschlüsseln verwendet wird. Vorteil: Schnelle

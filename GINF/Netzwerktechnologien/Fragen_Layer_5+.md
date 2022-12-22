@@ -6,7 +6,7 @@ Was bedeutet DHCP? (1 P.)
 - Dynamic Host Configuration Protocol
 
 welche Probleme löst DHCP? (2 P.)
-- Manuelle Vergabe und Wartung von IP Adressen wird automatisiert
+- Manuelle Vergabe und Wartung von IP Adressen ist zeitaufwändig und fehlerbehaftet
 - Doppelte Vergabe von IP Adressen 
 
 Welche Informationen teilt ein DHCP Server dem Client mit? maximal erreichbar (5 P.)
@@ -64,6 +64,10 @@ Welche Organisation verwaltet Standard-Portnummern?
 Was bedeutet das Kürzel IANA?
 - Internet Assigned Numbers Authority
 
+Welche Organisation betreut die Internet RFC's?
+
+Was sind Internet RFC's?
+
 ## NTP
 
 Wofür steht NTP?
@@ -76,27 +80,28 @@ Welche Ports werden von NTP verwendet
 - TCP + UDP 123
 
 Was bedeutet "Stratum" im Zusammenhang mit NTP?
-- "Abstand" .. wieviele Hops zur Atomuhr 
+- "Abstand" .. wieviele Hops zur Atomuhr / ultimativen Zeitquelle
 
 Ist ein niedrieger oder ein hoher Stratum-Wert Anzeichen einer sehr guten Zeitquelle?
-- (niedrig
+- niedrig
 
 Was ist eine Zeitquelle und welche kennen Sie?
-- GPS, Atomuhr 
+- GPS, Atomuhr (stratum 1)
+- Jeder NTP Server
 
 NTP ermöglicht eine Genauigkeit von welcher Größenordnung typischerweise für Endgeräte? (Minuten, Sekunden, ms (Millisekunden), µs (Mikrosekunden) ns (Nanosekunden))
-- (Millisekunden
+- Millisekunden
 
-Wie viele Millisekunden dauert eine Sekunde?
+Wie viele Millisekunden hat eine Sekunde?
 - 1000 
 
-Wie viele Millisekunden dauert eine Minute?
+Wie viele Millisekunden hat eine Minute?
 - 60_000 
 
-Wie viele Mikrosekunden dauert eine Sekunde?
+Wie viele Mikrosekunden hat eine Sekunde?
 - 1_000_000 
 
-Wie viele Nanosekunden dauert eine Millisekunde?
+Wie viele Nanosekunden hat eine Millisekunde?
 - 1000
 
 Wie wird die Umstellung von Winterzeit auf Sommerzeit in NTP durchgeführt?
@@ -137,33 +142,58 @@ Was kann man mit dem Programm *wireshark* machen?
 
 ## Fragen zu VPN
 
-Nennen Sie eine typische Problemstellung, für welche VPN eine Lösung ist.
-:
+Nennen Sie zwei typische Problemstellungen, für welche VPN eine Lösung ist.
+- Intranet
+- Geo
+
 Was wird in RFC 1918 festgelegt?
 
 ## Fragen zu NAT
 
 Wofür seht das Kürzel NAT?
+
 Erklären Sie in einigen Sätzen die Funktionsweise von NAT
+
 Was versteht man unter "reverse NAT"? Erklären Sie in eigenen Worten!
 
 ## Sicherheit
 
-Was bedeutet Authentisierung? (System weiß, wer man ist, wer Du bist
-Was bedeutet Autorisierung? (System erlaubt bestimmte Aktionen
+Was bedeutet Authentisierung?
+- System weiß, wer man ist, wer Du bist
+
+Was bedeutet Autorisierung?
+- System erlaubt bestimmte Aktionen
 
 Wodurch unterscheidet sich symmetrische von asymmetrischer Kryptographie?
+
 Welches Problem löst das Diffie-Helman Verfahren?
+
 Ist das Diffie-Helman Verfahren der symmetrischen oder asymmetrischen Kryptographie zuzuordnen?
+
 Welche Informationen sind in Digitalen Zertifikaten enthalten?
+
 Welche besondere Eigenschaft hat ein Root-Zertifikat?
+
 Kann ein Zertifikat abgelaufen sein (also nicht mehr gültig)?
+
 Unter welchen Umständen ist ein nicht abgelaufenes Zertifikat ungültig?
+
 Was ist eine Certificate Chain?
+
 Was ist ein Hash-Algorithmus?
+
 Was versteht man unter einer CA?
+
 Welche Aufgaben hat eine CA?
+
 Woher kann man ein digitales Zertifikat bekommen?
+
 Wie heißt das wichtigste Opensource-Werkzeug rund um das Thema Kryptographie?  
-Könnte man theoretisch mit openssl eine Certificate Authority implementieren?  
+
+Könnte man theoretisch mit openssl eine Certificate Authority selber bauen?
+
 Was versteht man unter dem Terminus "security by obscurity"?  
+
+Was besagt das Kerckhoff'sche Prinzip?
+
+
