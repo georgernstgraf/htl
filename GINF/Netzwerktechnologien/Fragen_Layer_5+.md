@@ -161,6 +161,8 @@ Was versteht man unter "reverse NAT"? Erklären Sie in eigenen Worten!
 Was bedeutet Authentisierung?
 - System weiß, wer man ist, wer Du bist
 
+Was ist die so genannte Two-Factor Authentisierung?
+
 Was bedeutet Autorisierung?
 - System erlaubt bestimmte Aktionen
 
