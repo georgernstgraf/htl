@@ -1,5 +1,13 @@
+ALL != ls *.md | awk '{printf "%s.pdf ", substr($$0, 1, length($$0)-3);}'
+
 %.pdf: %.md
 	mypandoc $<
+
+info:
+	@echo make $(ALL)
+
+# ls *.md | awk 'BEGIN {printf "make ";} {printf "%s.pdf ", substr($0, 1, length($0)-3);} END {printf "\n";}' | sh -v
+
 # all: 4_transport.pdf Fragensammlung_I.pdf Fragensammlung_II.pdf
 #
 # 
