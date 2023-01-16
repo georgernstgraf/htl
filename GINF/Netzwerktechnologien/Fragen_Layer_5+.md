@@ -101,7 +101,7 @@ Welche Ports werden von NTP verwendet
 - TCP + UDP 123
 
 Was bedeutet "Stratum" im Zusammenhang mit NTP?
-- "Abstand" .. wieviele Hops zur Atomuhr / ultimativen Zeitquelle
+- "Abstand" .. wieviele Hops zur Atomuhr / Referenz Zeitquelle
 
 Ist ein niedrieger oder ein hoher Stratum-Wert Anzeichen einer sehr guten Zeitquelle?
 - niedrig
