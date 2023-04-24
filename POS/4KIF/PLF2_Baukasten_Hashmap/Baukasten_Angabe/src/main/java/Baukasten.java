@@ -15,11 +15,7 @@ public class Baukasten {
         this.koerperSet = koerper;
         this.koerperDict = new HashMap<>();
         for (Koerper k : koerper) {
-            String art = k.getClass().getSimpleName();
-            if (!koerperDict.containsKey(art)) {
-                koerperDict.put(art, new ArrayList<>());
-            }
-            koerperDict.get(art).add(k);
+// TODO - Aufgabe 3
         }
         for (ArrayList arr : koerperDict.values()) {
             Collections.sort(arr);
@@ -40,16 +36,9 @@ public class Baukasten {
         this.nameBesitzer = nameBesitzer;
     }
 
-    public void addKoerper(Koerper k) {
-        if (k == null) {
-            throw new IllegalArgumentException("Ungueltiger Koerper");
-        }
-// TODO
-    }
-
     public double gesamtGewicht() {
         double gesamtGewicht = eigenGewicht;
-        // TODO
+        // TODO - Aufgabe 4
         return gesamtGewicht;
     }
 
