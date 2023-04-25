@@ -14,7 +14,7 @@ public class Baukasten {
         setNameBesitzer(nameBesitzer);
         this.koerperSet = koerper;
         this.koerperDict = new HashMap<>();
-        for (Koerper k : koerper) {
+        for (Koerper k : koerperSet) {
 // TODO - Aufgabe 3
         }
         for (ArrayList arr : koerperDict.values()) {
@@ -42,14 +42,9 @@ public class Baukasten {
         return gesamtGewicht;
     }
 
-    public boolean hasKoerper(Koerper k) {
-        return koerperSet.contains(k);
-    }
-
-
     public String toString() {
         String rw = String.format("======= Baukasten von %s =======\n", nameBesitzer);
-        rw += String.format("=== Eigengewicht: %.1fkg\n", gesamtGewicht()/1000);
+        rw += String.format("=== Eigengewicht: %.1fkg\n", gesamtGewicht() / 1000);
         for (String art : koerperDict.keySet().stream().sorted().toList()) {
             rw += String.format("  Abteilung %s (%d Vorkommen):\n", art, koerperDict.get(art).size());
             for (Koerper k : koerperDict.get(art)) {
@@ -58,6 +53,4 @@ public class Baukasten {
         }
         return rw;
     }
-
-
 }
