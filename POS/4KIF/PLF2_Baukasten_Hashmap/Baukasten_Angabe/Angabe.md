@@ -35,7 +35,7 @@ Felder befüllt. Beachten Sie hier, daß nicht jede Zeile 6 Spalten hat (Würfel
 Zylinder: 5, Quader: 6). Führen Sie eine gründliche Parameterprüfung durch, welche bei
 allen möglichen Fehlern eine neue `IllegalArgumentException` wirft!
 
-(4 Punkte)
+(6 Punkte)
 
 ### Aufgabe 3: Konstruktor von `Baukasten` - einordnen in Abteilungen
 
@@ -43,21 +43,21 @@ Im Konstruktor von `Baukasten` wurde der Code entfernt, welcher die Körper in d
 jeweilige Abteilung einordnet. Die Abteilung eines Körpers wird durch
 `koerper.getClass().getSimpleName()` ermittelt.
 
-(6 Punkte)
+(7 Punkte)
 
 ### Aufgabe 4: Gesamtgewicht des Baukastens
 
 Das Gewicht wird aus Eigengewicht + Summe aller Körpergewichte ermittelt. Vervollständigen
 Sie die vorhandene Methode!
 
-(4 Punkte)
+(2 Punkte)
 
 ### Aufgabe 5: `compareTo` in `Koerper`
 
 Wie in der Einleitung erwähnt, sind innerhalb der Abteilungen des Baukastens die Körper
 nach Farbe zu sortieren (alphabetisch), und bei Gleichheit nach Gewicht (absteigend)
 
-(4 Punkte)
+(3 Punkte)
 
 ---
 Maximal erreichbare Punkte: 23
