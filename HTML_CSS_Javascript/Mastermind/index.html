@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mastermind</h1>
+    <p>Guess the secret code of four colors in ten tries.</p>
+    <div id="secret-code">div secret code
+        <!-- The secret code will be displayed here after the game is over -->
+    </div>
+    <div id="guesses">div guesses
+        <!-- The guesses and feedback will be displayed here -->
+    </div>
+    <div id="masterCode">div colors
+        <!-- The available colors to choose from -->
+        <span class="circle" onclick="rotateColor(this)" style="background-color: aqua;"></span>
+        <span class="circle" onclick="rotateColor(this)"></span>
+        <span class="circle" onclick="rotateColor(this)"></span>
+        <span class="circle" onclick="rotateColor(this)"></span>
+    </div>
+    <button id="submit">Submit</button>
+    <button id="shuffle">Reset</button>
+</body>
+<script src="mycolors.js"></script>
+<script src="script.js"></script>
+</html>
