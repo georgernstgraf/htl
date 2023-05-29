@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>Mastermind</h1>
     <p>Guess the secret code of four colors in ten tries.</p>
@@ -10,21 +12,27 @@
         <!-- The secret code will be displayed here after the game is over -->
     </div>
     <div id="guesses">div guesses
-        
+
     </div>
     <!-- MASTER CODE -->
     <div id="masterCode" class="row">
-        <div id="shuffle">
-            <button type="button" onclick="shuffle(this.parentElement.parentElement)">shuffle</button>
+        <div id="newGame">
+            <button type="button" onclick="newGame()">new<br />Game</button>
         </div>
         <div class="circle" id="as1" onclick="rotateColor(this)"></div>
         <div class="circle" id="as2" onclick="rotateColor(this)"></div>
         <div class="circle" id="as3" onclick="rotateColor(this)"></div>
         <div class="circle" id="as4" onclick="rotateColor(this)"></div>
+        <div id="toggleVis">
+            <button type="button" onclick="toggleVisibility(this.parentElement.parentElement)">
+                toggle<br />Visibility
+            </button>
+        </div>
     </div>
     <button id="submit">Submit</button>
     <button id="shuffle">Reset</button>
 </body>
-<script src="mycolors.js"></script>
+<script src="mastermindcolors.js"></script>
 <script src="script.js"></script>
+
 </html>

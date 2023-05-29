@@ -6,7 +6,7 @@ function rotateColor(par) {
 }
 
 function shuffle(row) {
-    ammendCode(row)
+    cl("shuffle", row)
     for (let child of row.children) {
         if (child.classList.contains("circle")) {
             child.colorrotator.randomize()
@@ -14,18 +14,51 @@ function shuffle(row) {
     }
 }
 
-function refObj(par) {
-    console.log("refObj -- see \"obj\"")
-    console.log(par)
-    obj = par;
+function capture(par) {
+    cl("capture (stored in obj)", par)
+    obj = par
 }
 
-function ammendCode(row) {
+function makeVisible(row, bool) {
+    cl("makeVibile", row, bool)
+    row.visibility = bool
     for (let child of row.children) {
-        if (child.classList.contains("circle") && child.colorrotator == undefined) {
-            child.colorrotator = new MyColors(child)
+        if (child.classList.contains("circle")) {
+            child.colorrotator.display(bool)
         }
     }
 }
 
-// window.onload = ammendCode(masterCode)
+function initGuesses() {
+    // TODO clear guesses and add one empty guess
+}
+function toggleVisibility(row) {
+    cl("togglevisibilty", row)
+    row.visibility = !row.visibility
+    makeVisible(row, row.visibility)
+
+}
+function ammendCode(row) {
+    cl("ammendCode", row)
+    row.visibility = true
+    for (let child of row.children) {
+        if (child.classList.contains("circle") && child.colorrotator == undefined) {
+            child.colorrotator = new MasterMindColors(child)
+        }
+    }
+}
+
+function cl() {
+    for (let i = 0; i < arguments.length; i++) {
+        console.log(arguments[i]);
+    }
+}
+
+function newGame() {
+    ammendCode(masterCode)
+    shuffle(masterCode)
+    makeVisible(masterCode, false)
+    initGuesses()
+}
+
+window.onload = newGame()

@@ -1,4 +1,4 @@
-class MyColors {
+class MasterMindColors {
     static rgbValues = [
         "#ff0000",
         "#00ff00",
@@ -15,16 +15,19 @@ class MyColors {
         this.currentValue = -1
         //this.updateParent()
     }
-    updateParent() {
-        this.parent.style.backgroundColor = MyColors.getRGB(this.currentValue)
+    display(bool) {
+        if (bool) {
+            this.parent.style.backgroundColor = MasterMindColors.getRGB(this.currentValue)
+        } else {
+            this.parent.style.backgroundColor = "#ddd"
+        }
     }
-
     randomize() {
         this.currentValue = Math.round(Math.random() * 6)
-        this.updateParent()
+        this.display()
     }
     rotate() {
         this.currentValue = (this.currentValue + 1) % 6
-        this.updateParent()
+        this.display()
     }
 }
