@@ -10,14 +10,17 @@
         <!-- The secret code will be displayed here after the game is over -->
     </div>
     <div id="guesses">div guesses
-        <!-- The guesses and feedback will be displayed here -->
+        
     </div>
-    <div id="masterCode">div colors
-        <!-- The available colors to choose from -->
-        <span class="circle" onclick="rotateColor(this)" style="background-color: aqua;"></span>
-        <span class="circle" onclick="rotateColor(this)"></span>
-        <span class="circle" onclick="rotateColor(this)"></span>
-        <span class="circle" onclick="rotateColor(this)"></span>
+    <!-- MASTER CODE -->
+    <div id="masterCode" class="row">
+        <div id="shuffle">
+            <button type="button" onclick="shuffle(this.parentElement.parentElement)">shuffle</button>
+        </div>
+        <div class="circle" id="as1" onclick="rotateColor(this)"></div>
+        <div class="circle" id="as2" onclick="rotateColor(this)"></div>
+        <div class="circle" id="as3" onclick="rotateColor(this)"></div>
+        <div class="circle" id="as4" onclick="rotateColor(this)"></div>
     </div>
     <button id="submit">Submit</button>
     <button id="shuffle">Reset</button>
