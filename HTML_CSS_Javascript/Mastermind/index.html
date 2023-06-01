@@ -10,50 +10,20 @@
 <body onload="newGame()">
     <h1>Mastermind</h1>
     <p>Guess the secret code of four colors in ten tries.</p>
-    <div id="feld">
-        <div class="zeile">
-            <button class="bewerte">Bewerten</button>
-            <div class="s1 circle"></div>
-            <div class="s2 circle"></div>
-            <div class="s3 circle"></div>
-            <div class="s4 circle"></div>
+    <div class="feld" id="guesses">
+        <div class="zeile" onclick="capture(this)">
+            <button class="bewerte" onclick="bewerte(this.parentElement)">Bewerten</button>
+            <div class="s1 circle" onclick="rotateColor(this)"></div>
+            <div class="s2 circle" onclick="rotateColor(this)"></div>
+            <div class="s3 circle" onclick="rotateColor(this)"></div>
+            <div class="s4 circle" onclick="rotateColor(this)"></div>
             <div class="b1 circle"></div>
             <div class="b2 circle"></div>
             <div class="b3 circle"></div>
             <div class="b4 circle"></div>
         </div>
-        <!--         <li display="grid" grid-template-columns="auto auto auto auto auto auto">
-            <span class="bewerten">
-                <button type="button" onclick="bewerte(this.parentElement)">
-                    bewerte
-                </button>
-            </span>
-            <span class="circle" onclick="rotateColor(this)"></span>
-            <span class="circle" onclick="rotateColor(this)"></span>
-            <span class="circle" onclick="rotateColor(this)"></span>
-       <div class="zeile">
-        <button class="bewerte">Bewerten</button>
-        <div class="s1 circle"></div>
-        <div class="s2 circle"></div>
-        <div class="s3 circle"></div>
-        <div class="s4 circle"></div>
-        <div class="b1 circle"></div>
-        <div class="b2 circle"></div>
-        <div class="b3 circle"></div>
-        <div class="b4 circle"></div>
     </div>
-         <span class="circle" onclick="rotateColor(this)"></span>
-            <span id="toggleVis">
-                <button type="button" onclick="toggleVisibility(this.parentElement.parentElement)">
-                    toggle<br />Visibility
-                </button>
-            </span>
-        </li>
-        <li display="grid" grid-template-columns="auto">
-            My Guesses
-        </li>
-        <hr>
- --> <!-- MASTER CODE -->
+    <div class="feld">
         <div id="masterCode" class="zeile">
             <button class="bewerte" onclick="newGame()">New<br />Game</button>
             <div class="s1 circle" onclick="rotateColor(this)"></div>

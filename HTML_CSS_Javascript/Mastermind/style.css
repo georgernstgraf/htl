@@ -12,7 +12,7 @@ button {
     font-size: 1rem;
 }
 
-#feld {
+.feld {
     display: grid;
     grid-template-columns: auto;
     width: 500px;
@@ -101,77 +101,3 @@ h1 {
 p {
     text-align: center;
 }
-
-ul {
-    list-style-type: none;
-}
-
-/*
-button {
-    display: block;
-    margin: 10px auto;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    color: #000;
-    font-weight: bold;
-    cursor: pointer;
-    background-color: #ff0;
-}
-
-/* class
-.circle {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 5px;
-    box-shadow: inset 0 0 10px black;
-}
-
-.row {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
-}
-
-/* ids
-#guesses {
-    display: grid;
-    grid-template-columns: auto;
-}
-
-#secret-code {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-}
-
-#guesses {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
-    margin: 20px;
-}
-
-#masterCode {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#submit {
-    background-color: green;
-}
-
-#reset {
-    background-color: rgba(69, 149, 69, 0.587);
-}
-
-#probier {
-    background-color: #00ffff;
-}
-
-*/
