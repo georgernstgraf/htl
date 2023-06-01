@@ -17,8 +17,9 @@ function shuffle(row) {
 }
 
 function makeVisible(row, bool) {
-    cl("makeVibile", row, bool)
+    cl("makeVisible", row, bool)
     row.visible = bool
+    obj = row
     for (let child of row.children) {
         if (child.classList.contains("circle")) {
             child.colorrotator.setVisible(bool)

@@ -10,18 +10,40 @@
 <body onload="newGame()">
     <h1>Mastermind</h1>
     <p>Guess the secret code of four colors in ten tries.</p>
-    <ul id="guesses" display="grid" grid-template-columns="auto">
-        <li display="grid" grid-template-columns="auto auto auto auto auto auto">
-            <span class="bewerten"> <!-- 1 -->
+    <div id="feld">
+        <div class="zeile">
+            <button class="bewerte">Bewerten</button>
+            <div class="s1 circle"></div>
+            <div class="s2 circle"></div>
+            <div class="s3 circle"></div>
+            <div class="s4 circle"></div>
+            <div class="b1 circle"></div>
+            <div class="b2 circle"></div>
+            <div class="b3 circle"></div>
+            <div class="b4 circle"></div>
+        </div>
+        <!--         <li display="grid" grid-template-columns="auto auto auto auto auto auto">
+            <span class="bewerten">
                 <button type="button" onclick="bewerte(this.parentElement)">
                     bewerte
                 </button>
             </span>
-            <span class="circle" onclick="rotateColor(this)"></span><!-- 2 -->
             <span class="circle" onclick="rotateColor(this)"></span>
             <span class="circle" onclick="rotateColor(this)"></span>
-            <span class="circle" onclick="rotateColor(this)"></span><!-- 5 -->
-            <span id="toggleVis"> <!-- 6 -->
+            <span class="circle" onclick="rotateColor(this)"></span>
+       <div class="zeile">
+        <button class="bewerte">Bewerten</button>
+        <div class="s1 circle"></div>
+        <div class="s2 circle"></div>
+        <div class="s3 circle"></div>
+        <div class="s4 circle"></div>
+        <div class="b1 circle"></div>
+        <div class="b2 circle"></div>
+        <div class="b3 circle"></div>
+        <div class="b4 circle"></div>
+    </div>
+         <span class="circle" onclick="rotateColor(this)"></span>
+            <span id="toggleVis">
                 <button type="button" onclick="toggleVisibility(this.parentElement.parentElement)">
                     toggle<br />Visibility
                 </button>
@@ -30,22 +52,16 @@
         <li display="grid" grid-template-columns="auto">
             My Guesses
         </li>
-    </ul>
-    <hr>
-    <!-- MASTER CODE -->
-    <div id="masterCode" class="row">
-        <div id="newGame">
-            <button type="button" onclick="newGame()" id="reset">
-                new<br />Game
-            </button>
-        </div>
-        <div class="circle" id="as1" onclick="rotateColor(this)"></div>
-        <div class="circle" id="as2" onclick="rotateColor(this)"></div>
-        <div class="circle" id="as3" onclick="rotateColor(this)"></div>
-        <div class="circle" id="as4" onclick="rotateColor(this)"></div>
-        <div id="toggleVis">
-            <button type="button" onclick="toggleVisibility(this.parentElement.parentElement)">
-                toggle<br />Visibility
+        <hr>
+ --> <!-- MASTER CODE -->
+        <div id="masterCode" class="zeile">
+            <button class="bewerte" onclick="newGame()">New<br />Game</button>
+            <div class="s1 circle" onclick="rotateColor(this)"></div>
+            <div class="s2 circle" onclick="rotateColor(this)"></div>
+            <div class="s3 circle" onclick="rotateColor(this)"></div>
+            <div class="s4 circle" onclick="rotateColor(this)"></div>
+            <button class="visible" onclick="toggleVisibility(this.parentElement)">
+                Toggle<br />visible
             </button>
         </div>
     </div>
