@@ -3,21 +3,41 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <script src="mastermindcolors.js"></script>
+    <script src="script.js"></script>
 </head>
 
-<body>
+<body onload="newGame()">
     <h1>Mastermind</h1>
     <p>Guess the secret code of four colors in ten tries.</p>
-    <div id="secret-code">div secret code
-        <!-- The secret code will be displayed here after the game is over -->
-    </div>
-    <div id="guesses">div guesses
-
-    </div>
+    <ul id="guesses" display="grid" grid-template-columns="auto">
+        <li display="grid" grid-template-columns="auto auto auto auto auto auto">
+            <span class="bewerten"> <!-- 1 -->
+                <button type="button" onclick="bewerte(this.parentElement)">
+                    bewerte
+                </button>
+            </span>
+            <span class="circle" onclick="rotateColor(this)"></span><!-- 2 -->
+            <span class="circle" onclick="rotateColor(this)"></span>
+            <span class="circle" onclick="rotateColor(this)"></span>
+            <span class="circle" onclick="rotateColor(this)"></span><!-- 5 -->
+            <span id="toggleVis"> <!-- 6 -->
+                <button type="button" onclick="toggleVisibility(this.parentElement.parentElement)">
+                    toggle<br />Visibility
+                </button>
+            </span>
+        </li>
+        <li display="grid" grid-template-columns="auto">
+            My Guesses
+        </li>
+    </ul>
+    <hr>
     <!-- MASTER CODE -->
     <div id="masterCode" class="row">
         <div id="newGame">
-            <button type="button" onclick="newGame()">new<br />Game</button>
+            <button type="button" onclick="newGame()" id="reset">
+                new<br />Game
+            </button>
         </div>
         <div class="circle" id="as1" onclick="rotateColor(this)"></div>
         <div class="circle" id="as2" onclick="rotateColor(this)"></div>
@@ -29,10 +49,6 @@
             </button>
         </div>
     </div>
-    <button id="submit">Submit</button>
-    <button id="shuffle">Reset</button>
 </body>
-<script src="mastermindcolors.js"></script>
-<script src="script.js"></script>
 
 </html>

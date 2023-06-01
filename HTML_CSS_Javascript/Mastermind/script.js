@@ -1,7 +1,7 @@
 "use strict"
 
 var obj;
-var masterCode = document.getElementById("masterCode")
+var masterCode = undefined
 
 function rotateColor(par) {
     par.colorrotator.rotate()
@@ -65,11 +65,10 @@ function cl() {
 
 // alles Neu machen
 function newGame() {
+    cl("new game called")
+    masterCode = document.getElementById("masterCode")
     ammendCode(masterCode)
     shuffle(masterCode)
     makeVisible(masterCode, false)
     initGuesses()
 }
-
-// beim Laden der Seite
-window.onload = newGame()
