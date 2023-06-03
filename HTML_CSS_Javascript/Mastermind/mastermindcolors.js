@@ -23,7 +23,7 @@ class MasterMindColors {
         this.parent = parent
         this.currentValue = 0
         this.visible = true
-        //this.updateParent()
+        this.updateDisplay()
     }
 
     setVisible(bool) {
