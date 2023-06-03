@@ -1,5 +1,5 @@
 "use strict"
-class MasterMindColors {
+class ColorRotator {
 
     parent = undefined
     currentValue = undefined
@@ -38,7 +38,7 @@ class MasterMindColors {
 
     updateDisplay() {
         if (this.visible) {
-            this.parent.style.backgroundColor = MasterMindColors.getRGB(this.currentValue)
+            this.parent.style.backgroundColor = ColorRotator.getRGB(this.currentValue)
         } else {
             this.parent.style.backgroundColor = "#ddd"
         }

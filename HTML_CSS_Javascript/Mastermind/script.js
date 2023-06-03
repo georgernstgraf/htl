@@ -2,6 +2,7 @@
 
 var obj;
 var masterCode = undefined
+var guesses = undefined
 
 function rotateColor(par) {
     par.colorrotator.rotate()
@@ -33,8 +34,13 @@ function capture(par) {
     obj = par
 }
 
+function bewerte(par) {
+    cl("berterte", par)
+    obj = par
+}
 
 function initGuesses() {
+    guesses.prepend(Factory.getRow())
     // TODO clear guesses and add one empty guess
 }
 
@@ -52,7 +58,7 @@ function ammendCode(row) {
     row.visible = true
     for (let child of row.children) {
         if (child.classList.contains("circle") && child.colorrotator == undefined) {
-            child.colorrotator = new MasterMindColors(child)
+            child.colorrotator = new ColorRotator(child)
         }
     }
 }
@@ -68,6 +74,7 @@ function cl() {
 function newGame() {
     cl("new game called")
     masterCode = document.getElementById("masterCode")
+    guesses = document.getElementById("guesses")
     ammendCode(masterCode)
     shuffle(masterCode)
     makeVisible(masterCode, false)
