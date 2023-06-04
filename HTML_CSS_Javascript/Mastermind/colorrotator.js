@@ -22,8 +22,9 @@ class ColorRotator {
     constructor(parent) {  // 
         this.parent = parent
         this.currentValue = 0
-        this.visible = true
+        this.visible = false
         this.updateDisplay()
+        this.visible = true
     }
 
     setVisible(bool) {

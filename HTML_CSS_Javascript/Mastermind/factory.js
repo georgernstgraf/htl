@@ -12,10 +12,10 @@ class Factory {
             <div class="b4 circle"></div>
         </div> */
     static getRow(master = false) {
-        let circ, i
-        let zeile = document.createElement("div")
+        let zeile, button, circ, i
+        zeile = document.createElement("div")
         zeile.classList.add("zeile")
-        let button = document.createElement("button")
+        button = document.createElement("button")
         button.classList.add("bewerte")
         button.onclick = function () {
             bewerte(this.parentElement)
@@ -26,6 +26,7 @@ class Factory {
             circ = document.createElement("div")
             circ.classList.add(`s${i}`)
             circ.classList.add("circle")
+            circ.classList.add("peg")
             circ.onclick = function () { rotateColor(this) }
             circ.colorrotator = new ColorRotator(circ)
             zeile.appendChild(circ)

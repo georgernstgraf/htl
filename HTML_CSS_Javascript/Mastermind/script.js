@@ -36,6 +36,7 @@ function capture(par) {
 
 function bewerte(par) {
     cl("berterte", par)
+    this.bewertung = new Bewertung(this., masterCode.)
     obj = par
 }
 
