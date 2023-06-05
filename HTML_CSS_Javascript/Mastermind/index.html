@@ -3,39 +3,24 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <script src="factory.js"></script>
     <script src="colorrotator.js"></script>
     <script src="code.js"></script>
-    <script src="factory.js"></script>
     <script src="script.js"></script>
 </head>
 
-<body onload="newGame()">
+<body onload="init()">
     <h1>Mastermind</h1>
     <p>Guess the secret code of four colors in ten tries.</p>
     <div class="feld" id="guesses">
-        <div class="zeile" onclick="capture(this)">
-            <button class="bewerte" onclick="bewerte(this.parentElement)">Bewerten</button>
-            <div class="s1 circle" onclick="rotateColor(this)"></div>
-            <div class="s2 circle" onclick="rotateColor(this)"></div>
-            <div class="s3 circle" onclick="rotateColor(this)"></div>
-            <div class="s4 circle" onclick="rotateColor(this)"></div>
-            <div class="b1 circle"></div>
-            <div class="b2 circle"></div>
-            <div class="b3 circle"></div>
-            <div class="b4 circle"></div>
-        </div>
     </div>
-    <div class="feld">
-        <div id="masterCode" class="zeile">
-            <button class="bewerte" onclick="newGame()">New<br />Game</button>
-            <div class="s1 circle" onclick="rotateColor(this)"></div>
-            <div class="s2 circle" onclick="rotateColor(this)"></div>
-            <div class="s3 circle" onclick="rotateColor(this)"></div>
-            <div class="s4 circle" onclick="rotateColor(this)"></div>
-            <button class="visible" onclick="toggleVisibility(this.parentElement)">
-                Toggle<br />visible
-            </button>
-        </div>
+    <hr />
+    <div class="feld" id="master">
+    </div>
+    <hr />
+    <div class="feld" id="logconsole">
+        <textarea id="notify" style="height: 7rem">urxn
+        </textarea>
     </div>
 </body>
 

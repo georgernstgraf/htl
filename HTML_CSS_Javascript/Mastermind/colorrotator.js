@@ -1,9 +1,12 @@
 "use strict"
+
+// Klasse für EINEN STECKER (PEG)
 class ColorRotator {
 
     parent = undefined
     currentValue = undefined
     visible = undefined
+    isUpdated = undefined
 
     static rgbValues = [
         "#ff0000",
@@ -22,23 +25,14 @@ class ColorRotator {
     constructor(parent) {  // 
         this.parent = parent
         this.currentValue = 0
-        this.visible = false
-        this.updateDisplay()
         this.visible = true
+        this.updated = false
     }
 
-    setVisible(bool) {
-        this.visible = bool
-        this.updateDisplay()
-    }
-
-    toggleVisibility() {
-        this.visible = !this.visible
-        this.updateDisplay()
-    }
-
-    updateDisplay() {
-        if (this.visible) {
+    updateDisplay(visible) {
+        this.visible = visible
+        // cl("update", this, visible)
+        if (visible) {
             this.parent.style.backgroundColor = ColorRotator.getRGB(this.currentValue)
         } else {
             this.parent.style.backgroundColor = "#ddd"
@@ -46,17 +40,22 @@ class ColorRotator {
     }
 
     randomize() {
-        this.currentValue = Math.round(Math.random() * 6)
+        this.currentValue = Math.floor(Math.random() * 6)
         this.updateDisplay()
+        this.isUpdated = true
     }
 
     rotate() {
         if (!this.visible) {
-            console.log("NOT CHANGING AN INVISIBLE CIRCLE")
+            notify("Ist unsichtbar -> Keine Änderung")
             return
         }
-        this.currentValue = (this.currentValue + 1) % 6
-        this.updateDisplay()
+        if (!this.isUpdated) {
+            this.isUpdated = true
+        } else {
+            this.currentValue = (this.currentValue + 1) % 6
+        }
+        this.updateDisplay(true)
     }
 
 }
