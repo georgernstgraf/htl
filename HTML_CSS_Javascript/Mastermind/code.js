@@ -3,6 +3,7 @@ class Code {
 
     myObj = undefined  // Zeile
     visible = true
+    isBewerted = false
 
     constructor(myObj) {
         this.myObj = myObj
@@ -49,7 +50,7 @@ class Code {
         this.makeVisible(!this.myObj.visible)
     }
     bewerte(guess) {
-        let rw, row, guessArray, i, bewCount
+        let rw, guessArray, i, bewCount
         if (!guess.isComplete()) {
             notify("Code ist nicht fertig, kann nicht bewerten")
             return
@@ -72,10 +73,16 @@ class Code {
         for (; bewCount <= 4; bewCount++) {
             guess.myObj.getElementsByClassName(`b${bewCount}`)[0].style.backgroundColor = "#888"
         }
-        row = guess
-        obj = row
-        cl("row: ", row)
-        // TODO update pegs
+        if (!this.isBewerted) {
+            if (rw[0] < 4) {
+                guesses.prepend(Factory.getRow())
+            } else {
+                guesses.prepend(Factory.getWin())
+            }
+        } else {
+            notify("Ist schon bewertet!")
+        }
+        this.isBewerted = true
     }
     getBewertung(master, guess) { // master & guess are int[4], return int[2]
         let schwarze = 0, weisse = 0

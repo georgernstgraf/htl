@@ -22,7 +22,7 @@ class ColorRotator {
         return this.rgbValues[i % this.rgbValues.length]
     }
 
-    constructor(parent) {  // 
+    constructor(parent) {  // das Ringerl
         this.parent = parent
         this.currentValue = 0
         this.visible = true

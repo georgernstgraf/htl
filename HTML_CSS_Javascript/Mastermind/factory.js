@@ -65,4 +65,14 @@ class Factory {
         }
         return zeile
     }
+    static getWin() {
+        let zeile, win
+        zeile = document.createElement("div")
+        zeile.classList.add("zeile")
+        win = document.createElement("div")
+        win.classList.add("win")
+        win.innerHTML = "Gewonnen!"
+        zeile.appendChild(win)
+        return zeile
+    }
 }
