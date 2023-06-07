@@ -1,11 +1,12 @@
 "use strict"
 class Factory {
 
-    static getRow(master = false) {
-        let zeile, button, circ, i
+    static getCode(master = false) {
+        let zeile, button, circ, i, code, colorrotator
         zeile = document.createElement("div")
         zeile.classList.add("zeile")
-        zeile.code = new Code(zeile)
+        code = new Code(zeile)
+        zeile.code = code
         button = document.createElement("button")
         if (master) {
             button.classList.add("neuSpiel")
@@ -32,7 +33,8 @@ class Factory {
             circ.classList.add(`s${i}`)
             circ.classList.add("circle")
             circ.classList.add("peg")
-            circ.colorrotator = new ColorRotator(circ)
+            colorrotator = new ColorRotator(circ)
+            circ.colorrotator = colorrotator // TODO add to Code
             circ.addEventListener("click", (e) => { e.target.colorrotator.rotate() })
             zeile.appendChild(circ)
             zeile.code.shuffle() // TODO debugging option

@@ -75,7 +75,7 @@ class Code {
         }
         if (!this.isBewerted) {
             if (rw[0] < 4) {
-                guesses.prepend(Factory.getRow())
+                guesses.prepend(Factory.getCode())
             } else {
                 guesses.prepend(Factory.getWin())
             }
