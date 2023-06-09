@@ -1,54 +1,107 @@
 "use strict"
 class Code {
 
-    myObj = undefined  // Zeile
+    parent = null
+    domObj = null
+    colorArray = null
     visible = true
     isBewerted = false
 
-    constructor(myObj) {
-        this.myObj = myObj
-    }
+    constructor(parent) {
+        this.parent = parent
+        this.domObj = document.createElement("div")
+        this.domObj.classList.add("this.domObj")
+        this.domObj.controller = this
 
-    isComplete() {
-        let rw = true
-        for (let child of this.myObj.children) {
-            if (child.classList.contains("peg") && !child.colorrotator.isUpdated) { rw = false }
+        let col
+        this.colorArray = []
+        for (let i = 1; i <= 4; i++) {
+            col = new Color(this, i)
+            this.domObj.appendChild(col.domObj)
+            this.colorArray.push(col)
         }
-        return rw
-    }
-
-    getList() {
-        let rw = []
-        for (let child of this.myObj.children) {
-            if (child.classList.contains("peg")) {
-                rw.push(child.colorrotator.currentValue)
-            }
-        }
-        return rw
     }
 
     shuffle() {
-        for (let child of this.myObj.children) {
-            if (child.classList.contains("peg")) {
-                child.colorrotator.randomize()
-            }
+        for (let color of this.colorArray) {
+            color.randomize()
         }
     }
 
-    makeVisible(bool) {
-        // cl("makeVisible", row, bool)
-        this.myObj.visible = bool
-        for (let child of this.myObj.children) {
-            if (child.classList.contains("peg")) {
-                child.colorrotator.updateDisplay(bool)
-            }
+    makeVisible(visible) {
+        this.visible = visible
+        for (let color of this.colorArray) {
+            color.updateDisplay(visible)
         }
     }
 
     toggleVisibility() {
-        // cl("togglevisibilty", row)
-        this.makeVisible(!this.myObj.visible)
+        this.makeVisible(!this.visible)
     }
+
+}
+
+class Master extends Code {
+    constructor(parent) {
+        super(parent)
+        let button
+        button = document.createElement("button")
+        button.classList.add("neuSpiel")
+        button.innerHTML = "Neues\nSpiel"
+        button.onclick = parent.newGame
+        this.domObj.appendChild(button)
+        button = document.createElement("button")
+        button.classList.add("visible")
+        button.innerText = "Zeig\nher"
+        button.addEventListener("click", (e) => {
+            e.target.parentElement.code.toggleVisibility()
+            if (e.target.innerText == "Zeig\nher") {
+                e.target.innerText = "Ver-\nsteck"
+            } else {
+                e.target.innerText = "Zeig\nher"
+            }
+        })
+        this.domObj.appendChild(button)
+        this.shuffle()
+        this.makeVisible(false)
+    }
+}
+
+
+
+
+class Guess extends Code {  // Whole Row
+    bewertePegs = []
+    constructor(parent) {  // TODO Master verankern für Bewertung
+        super(parent)
+        let button = document.createElement("button")
+        button.classList.add("bewerte")
+        button.innerText = "Bewerten"
+        button.addEventListener("click", (e) => {
+            this.domObj.code.bewerte(e.target.parentElement.code)
+        })
+        this.domObj.appendChild(button)
+        button = document.createElement("button")
+        button.classList.add("autoGuess")
+        button.innerHTML = "Auto Rate"
+        button.addEventListener("click", (e) => { notify("autoTODO", e.target.parentElement) }) // TODO
+        this.domObj.appendChild(button)
+
+        let peg
+        for (let i = 1; i <= 4; i++) {
+            peg = new BewertePeg(this, i)
+            this.bewertePegs.push(peg)
+            this.domObj.appendChild(peg.domObj)
+        }
+    }
+    isComplete() {   // TODO rename sinnvoll
+        let rw = true
+        for (let color of this.colorArray) {
+            if (!color.isUpdated) { rw = false }
+        }
+        return rw
+    }
+
     bewerte(guess) {
         let rw, guessArray, i, bewCount
         if (!guess.isComplete()) {
@@ -75,15 +128,16 @@ class Code {
         }
         if (!this.isBewerted) {
             if (rw[0] < 4) {
-                guesses.prepend(Factory.getRow())
+                guesses.prepend(Factory.getRow())  // TODO reorg new RowGuess
             } else {
-                guesses.prepend(Factory.getWin())
+                guesses.prepend(new RowWin().domObj)
             }
         } else {
             notify("Ist schon bewertet!")
         }
         this.isBewerted = true
     }
+
     getBewertung(master, guess) { // master & guess are int[4], return int[2]
         let schwarze = 0, weisse = 0
         // Erst die Anzahl der schwarzen berechnen und sowohl Vorgabe als auch Versuch auf undefined setzen
@@ -112,4 +166,31 @@ class Code {
         }
         return [schwarze, weisse]
     }
+
 }
+
+class BewertePeg {
+    parent = null
+    domObj = null
+    constructor(parent, i) {
+        this.parent = parent
+        let circ = document.createElement("div")
+        circ.classList.add("circle")
+        circ.classList.add("bew")
+        circ.classList.add(`b${i}`)
+        this.domObj = circ
+    }
+}
+
+class RowWin {
+    domObj = null
+    constructor() {
+        this.domObj = document.createElement("div")
+        this.domObj.classList.add("this.domObj")
+        let win = document.createElement("div")
+        win.classList.add("win")
+        win.innerHTML = "Gewonnen!"
+        this.domObj = this.domObj
+    }
+}
+

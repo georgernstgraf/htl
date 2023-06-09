@@ -1,12 +1,15 @@
 "use strict"
 
 // Klasse für EINEN STECKER (PEG)
-class ColorRotator {
+
+
+class Color {
 
     parent = undefined
     currentValue = undefined
     visible = undefined
     isUpdated = undefined
+    domObj = null
 
     static rgbValues = [
         "#ff0000",
@@ -22,20 +25,26 @@ class ColorRotator {
         return this.rgbValues[i % this.rgbValues.length]
     }
 
-    constructor(parent) {  // das Ringerl
+    constructor(parent, num) {
         this.parent = parent
         this.currentValue = 0
         this.visible = true
         this.updated = false
+        this.domObj = document.createElement("div")
+        this.domObj.controller = this
+        this.domObj.classList.add("circle")
+        this.domObj.classList.add("peg")
+        this.domObj.classList.add(`s${num}`)
+        this.domObj.addEventListener("click", (e) => { e.target.controller.rotate() })
     }
 
     updateDisplay(visible) {
         this.visible = visible
         // cl("update", this, visible)
         if (visible) {
-            this.parent.style.backgroundColor = ColorRotator.getRGB(this.currentValue)
+            this.domObj.style.backgroundColor = ColorRotator.getRGB(this.currentValue)
         } else {
-            this.parent.style.backgroundColor = "#ddd"
+            this.domObj.style.backgroundColor = "#ddd"
         }
     }
 
@@ -47,7 +56,7 @@ class ColorRotator {
 
     rotate() {
         if (!this.visible) {
-            notify("Ist unsichtbar -> Keine Änderung")
+            this.parent.parent.parent.notify("Ist unsichtbar -> Keine Änderung")
             return
         }
         if (!this.isUpdated) {
