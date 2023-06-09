@@ -128,7 +128,7 @@ class Guess extends Code {  // Whole Row
         }
         if (!this.isBewerted) {
             if (rw[0] < 4) {
-                guesses.prepend(Factory.getRow())  // TODO reorg new RowGuess
+                guesses.prepend(Factory.getCode())
             } else {
                 guesses.prepend(new RowWin().domObj)
             }
