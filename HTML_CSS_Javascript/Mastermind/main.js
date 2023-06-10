@@ -24,7 +24,7 @@ class Main {
     initGuesses() {
         this.domGuessesField.innerHTML = ""
 
-        this.guesses = [new Guess(this)]
+        this.guesses = [new Guess(this, this.master.getPossibilities())]
         this.domGuessesField.prepend(this.guesses[0].domObj)
     }
 

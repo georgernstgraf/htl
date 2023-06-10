@@ -30,23 +30,6 @@ class Code {
         return rw
     }
 
-    shuffle() {
-        for (let color of this.colorArray) {
-            color.randomize()
-        }
-    }
-
-    makeVisible(visible) {
-        this.visible = visible
-        for (let color of this.colorArray) {
-            color.updateDisplay(visible)
-        }
-    }
-
-    toggleVisibility() {
-        this.makeVisible(!this.visible)
-    }
-
 }
 
 class Master extends Code {
@@ -81,6 +64,39 @@ class Master extends Code {
         this.shuffle()
         this.makeVisible(false)
     }
+
+    getPossibilities() {
+        let rw = []
+        for (let i = 0; i < 6; i++) {
+            for (let j = 0; j < 6; j++) {
+                for (let k = 0; k < 6; k++) {
+                    for (let l = 0; l < 6; l++) {
+                        rw.push([i, j, k, l])
+                    }
+                }
+            }
+        }
+        return rw
+    }
+
+    shuffle() {
+        for (let color of this.colorArray) {
+            color.randomize()
+        }
+    }
+
+    makeVisible(visible) {
+        this.visible = visible
+        for (let color of this.colorArray) {
+            color.updateDisplay(visible)
+        }
+    }
+
+    toggleVisibility() {
+        this.makeVisible(!this.visible)
+    }
+
+
 }
 
 
@@ -88,9 +104,10 @@ class Master extends Code {
 
 class Guess extends Code {  // Whole Row
     bewertePegs = []
-    constructor(parent) {  // TODO Master verankern für Bewertung
+    possibilitiesInherited = null // array
+    constructor(parent, possibilities) {  // TODO Master verankern für Bewertung
         super(parent)
-
+        this.possibilitiesInherited = possibilities
         // Bewerte - Button
         let button = document.createElement("button")
         button.obj = this
@@ -102,10 +119,15 @@ class Guess extends Code {  // Whole Row
         })
         this.domObj.appendChild(button)
 
+        // auto Rate Button
         button = document.createElement("button")
+        button.obj = this
         button.classList.add("autoGuess")
         button.innerHTML = "Auto Rate"
-        button.addEventListener("click", (e) => { notify("autoTODO", e.target.parentElement) }) // TODO
+        button.addEventListener("click", (e) => {
+            e.target.obj.autoGuess()
+
+        })
         this.domObj.appendChild(button)
 
         let peg
@@ -189,7 +211,38 @@ class Guess extends Code {  // Whole Row
         }
         return [schwarze, weisse]
     }
+    autoGuess() {
+        let maxDiverstityArray = this.getMaxDiversities(this.possibilitiesInherited)
+        let autoGuess = maxDiverstityArray[Math.floor(Math.random() * maxDiverstityArray.length)]
+        this.updateSelf(autoGuess)
+    }
 
+    updateSelf(guess) {
+        for (let i = 0; i < 4; i++) {
+            this.colorArray[i].setInt(guess[i])
+        }
+    }
+    getMaxDiversities(arr) {
+        let dict = new Map()
+        for (let i = 0; i < arr.length; i++) {
+            let div = this.getDiversity(arr[i])
+            if (!dict.has(div)) {
+                dict.set(div, [])
+            }
+            dict.get(div).push(arr[i])
+        }
+        let keys = Array.from(dict.keys()).sort()
+        return dict.get(keys.pop())
+    }
+    getDiversity(arr) {
+        let symbols = []
+        for (let i = 0; i < arr.length; i++) {
+            if (!symbols.includes(arr[i])) {
+                symbols.push(arr[i])
+            }
+        }
+        return symbols.length
+    }
 }
 
 class BewertePeg {
