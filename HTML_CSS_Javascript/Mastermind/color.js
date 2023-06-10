@@ -5,7 +5,7 @@
 
 class Color {
 
-    parent = undefined
+    obj = undefined
     currentValue = undefined
     visible = undefined
     isUpdated = undefined
@@ -26,23 +26,23 @@ class Color {
     }
 
     constructor(parent, num) {
-        this.parent = parent
+        this.obj = parent
         this.currentValue = 0
         this.visible = true
-        this.updated = false
+        this.isUpdated = false
         this.domObj = document.createElement("div")
-        this.domObj.controller = this
+        this.domObj.obj = this
         this.domObj.classList.add("circle")
         this.domObj.classList.add("peg")
         this.domObj.classList.add(`s${num}`)
-        this.domObj.addEventListener("click", (e) => { e.target.controller.rotate() })
+        this.domObj.addEventListener("click", (e) => { e.target.obj.rotate() })
     }
 
     updateDisplay(visible) {
         this.visible = visible
         // cl("update", this, visible)
         if (visible) {
-            this.domObj.style.backgroundColor = ColorRotator.getRGB(this.currentValue)
+            this.domObj.style.backgroundColor = Color.getRGB(this.currentValue)
         } else {
             this.domObj.style.backgroundColor = "#ddd"
         }
@@ -56,7 +56,7 @@ class Color {
 
     rotate() {
         if (!this.visible) {
-            this.parent.parent.parent.notify("Ist unsichtbar -> Keine Änderung")
+            this.obj.parent.notify("Ist unsichtbar -> Keine Änderung")
             return
         }
         if (!this.isUpdated) {

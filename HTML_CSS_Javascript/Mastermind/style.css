@@ -2,6 +2,7 @@ div {
     align-self: normal;
     border: solid 0.2rem #999;
     background-color: #ddd;
+    margin: auto;
 }
 
 button {
@@ -12,13 +13,13 @@ button {
     font-size: 1rem;
 }
 
-.feld {
+.field {
     display: grid;
     grid-template-columns: auto;
     width: 500px;
 }
 
-.zeile {
+.row {
     display: grid;
     border: #000 0.2rem solid;
     border-radius: 1rem;

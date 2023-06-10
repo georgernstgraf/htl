@@ -8,10 +8,10 @@ class Code {
     isBewerted = false
 
     constructor(parent) {
-        this.parent = parent
+        this.parent = parent  // parent = main
         this.domObj = document.createElement("div")
-        this.domObj.classList.add("this.domObj")
-        this.domObj.controller = this
+        this.domObj.classList.add("row")
+        this.domObj.obj = this
 
         let col
         this.colorArray = []
@@ -20,6 +20,14 @@ class Code {
             this.domObj.appendChild(col.domObj)
             this.colorArray.push(col)
         }
+    }
+
+    getPrimitive() {
+        let rw = []
+        for (let color of this.colorArray) {
+            rw.push(color.currentValue)
+        }
+        return rw
     }
 
     shuffle() {
@@ -42,19 +50,27 @@ class Code {
 }
 
 class Master extends Code {
-    constructor(parent) {
+    constructor(parent) {  // parent: main!
         super(parent)
         let button
         button = document.createElement("button")
+        button.obj = this
         button.classList.add("neuSpiel")
         button.innerHTML = "Neues\nSpiel"
-        button.onclick = parent.newGame
+        button.addEventListener("click", (e) => {
+            // cl("Neues Spiel // target", e.target)
+            // e.target.parentElement.obj.obj.newGame()
+            e.target.obj.parent.newGame()
+        })
         this.domObj.appendChild(button)
+        // Versteck Button
         button = document.createElement("button")
+        button.obj = this
         button.classList.add("visible")
         button.innerText = "Zeig\nher"
         button.addEventListener("click", (e) => {
-            e.target.parentElement.code.toggleVisibility()
+            //cl("zeige // e.target", e.target)
+            e.target.obj.toggleVisibility()
             if (e.target.innerText == "Zeig\nher") {
                 e.target.innerText = "Ver-\nsteck"
             } else {
@@ -74,13 +90,18 @@ class Guess extends Code {  // Whole Row
     bewertePegs = []
     constructor(parent) {  // TODO Master verankern für Bewertung
         super(parent)
+
+        // Bewerte - Button
         let button = document.createElement("button")
+        button.obj = this
         button.classList.add("bewerte")
         button.innerText = "Bewerten"
         button.addEventListener("click", (e) => {
-            this.domObj.code.bewerte(e.target.parentElement.code)
+            cl("e.target", e.target)
+            e.target.obj.bewerte()
         })
         this.domObj.appendChild(button)
+
         button = document.createElement("button")
         button.classList.add("autoGuess")
         button.innerHTML = "Auto Rate"
@@ -102,38 +123,40 @@ class Guess extends Code {  // Whole Row
         return rw
     }
 
-    bewerte(guess) {
-        let rw, guessArray, i, bewCount
-        if (!guess.isComplete()) {
-            notify("Code ist nicht fertig, kann nicht bewerten")
+    bewerte(master = null) {
+        let rw, guessArray, bewCount
+        if (!this.isComplete()) {
+            this.parent.notify("Code ist nicht fertig, kann nicht bewerten")
             return
         }
-        let master = masterRow.code.getList()
-        guessArray = guess.getList()
-        notify(`master: ${master}`)
-        notify(`guessA: ${guessArray}`)
+        if (master == null) {
+            master = this.parent.master.getPrimitive()
+        }
+        guessArray = this.getPrimitive()
+        this.parent.notify(`master: ${master}`)
+        this.parent.notify(`guessA: ${guessArray}`)
         rw = this.getBewertung(master, guessArray)
-        notify(`Bewertung: ${rw[0]} schwarze und ${rw[1]} weisse`)
+        this.parent.notify(`Bewertung: ${rw[0]} schwarze und ${rw[1]} weisse`)
         bewCount = 1
-        for (i = 0; i < rw[0]; i++) {
-            guess.myObj.getElementsByClassName(`b${bewCount}`)[0].style.backgroundColor = "#000"
+        for (let i = 0; i < rw[0]; i++) {
+            this.domObj.getElementsByClassName(`b${bewCount}`)[0].style.backgroundColor = "#000"
             bewCount++
         }
-        for (i = 0; i < rw[1]; i++) {
-            guess.myObj.getElementsByClassName(`b${bewCount}`)[0].style.backgroundColor = "#fff"
+        for (let i = 0; i < rw[1]; i++) {
+            this.domObj.getElementsByClassName(`b${bewCount}`)[0].style.backgroundColor = "#fff"
             bewCount++
         }
         for (; bewCount <= 4; bewCount++) {
-            guess.myObj.getElementsByClassName(`b${bewCount}`)[0].style.backgroundColor = "#888"
+            this.domObj.getElementsByClassName(`b${bewCount}`)[0].style.backgroundColor = "#888"
         }
         if (!this.isBewerted) {
             if (rw[0] < 4) {
-                guesses.prepend(Factory.getCode())
+                this.parent.prependGuess() // TODO
             } else {
-                guesses.prepend(new RowWin().domObj)
+                this.parent.prependWin()  // TODO
             }
         } else {
-            notify("Ist schon bewertet!")
+            this.parent.notify("Ist schon bewertet!")
         }
         this.isBewerted = true
     }
@@ -184,13 +207,13 @@ class BewertePeg {
 
 class RowWin {
     domObj = null
-    constructor() {
+    constructor(parent) {
+        this.parent = parent
         this.domObj = document.createElement("div")
-        this.domObj.classList.add("this.domObj")
+        this.domObj.classList.add("row")
         let win = document.createElement("div")
         win.classList.add("win")
         win.innerHTML = "Gewonnen!"
-        this.domObj = this.domObj
+        this.domObj.appendChild(win)
     }
 }
-

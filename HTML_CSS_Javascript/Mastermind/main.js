@@ -4,38 +4,50 @@ class Main {
     master = null
     guesses = null
 
-    domMaster = null
+    domMasterField = null
     domGuessesField = null
     domNotifyBox = null
 
     constructor(master, guesses, notify) {
-        this.domMaster = master
+        this.domMasterField = master
         this.domGuessesField = guesses
         this.domNotifyBox = notify
     }
 
-    newGame() { // TODO reorg callers
+    newGame() {
         this.initMaster()
         this.initGuesses()
-        this.domNotifyBox.value = "Neues Spiel gestartet"
+        this.domNotifyBox.value = ""
+        this.notify("Neues Spiel gestartet")
     }
 
     initGuesses() {
-        this.guesses = [new Guess(this)]
         this.domGuessesField.innerHTML = ""
-        this.domGuessesField.prepend(this.guesses[0].domObj) // master = false
+
+        this.guesses = [new Guess(this)]
+        this.domGuessesField.prepend(this.guesses[0].domObj)
     }
 
     initMaster() {
+        this.domMasterField.innerHTML = ""
+
         this.master = new Master(this)
-        this.domMaster.innerHTML = ""
-        this.domMaster.appendChild(this.master.domObj)
+        this.domMasterField.appendChild(this.master.domObj)
     }
 
+    prependGuess() {
+        this.guesses.push(new Guess(this))
+        this.domGuessesField.prepend(this.guesses[this.guesses.length - 1].domObj)
+    }
+
+    prependWin() {
+        this.guesses.push(new RowWin(this))
+        this.domGuessesField.prepend(this.guesses[this.guesses.length - 1].domObj)
+    }
     notify() {
         let t = new Date().toLocaleTimeString()
         for (let i = 0; i < arguments.length; i++) {
-            domNotifyBox.value = `${t}: ${arguments[i]}\n` + domNotifyBox.value
+            this.domNotifyBox.value = `${t}: ${arguments[i]}\n` + this.domNotifyBox.value
         }
     }
 
