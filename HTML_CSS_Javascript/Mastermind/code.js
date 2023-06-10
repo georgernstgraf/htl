@@ -99,9 +99,6 @@ class Master extends Code {
 
 }
 
-
-
-
 class Guess extends Code {  // Whole Row
     bewertePegs = []
     bewertung = null
@@ -243,8 +240,8 @@ class Guess extends Code {  // Whole Row
         return [schwarze, weisse]
     }
     autoGuess() {
-        let maxDiverstityArray = this.getMaxDiversities(this.possibilitiesInherited)
-        let autoGuess = maxDiverstityArray[Math.floor(Math.random() * maxDiverstityArray.length)]
+        let bestArray = this.getBestArray(this.possibilitiesInherited)
+        let autoGuess = bestArray[Math.floor(Math.random() * bestArray.length)]
         this.updateSelf(autoGuess)
     }
 
@@ -253,8 +250,8 @@ class Guess extends Code {  // Whole Row
             this.colorArray[i].setInt(guess[i])
         }
     }
-    getMaxDiversities(arr) {
-        let dict = new Map()
+    getBestArray(arr) {  // array of guess-arrays
+        let dict = new DiversityMap()
         for (let i = 0; i < arr.length; i++) {
             let div = this.getDiversity(arr[i])
             if (!dict.has(div)) {
@@ -262,9 +259,8 @@ class Guess extends Code {  // Whole Row
             }
             dict.get(div).push(arr[i])
         }
-        console.log(dict)
-        let keys = Array.from(dict.keys()).sort()
-        return dict.get(keys.pop())
+        // console.log(dict)
+        return dict.getFullestArray()
     }
 
     getDiversity(arr) {
@@ -278,6 +274,22 @@ class Guess extends Code {  // Whole Row
     }
 }
 
+class DiversityMap extends Map {
+    getFullestArray() {
+        let max = 0
+        let rw
+        for (let i of this.keys())
+            if (this.get(i).length > max) {
+                max = this.get(i).length
+                rw = this.get(i)
+            }
+        return rw
+    }
+    getMostDiverseArray() {
+        let keys = Array.from(this.keys()).sort()
+        return this.get(keys.pop())
+    }
+}
 
 class BewertePeg {
     parent = null
