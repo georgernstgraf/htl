@@ -54,7 +54,7 @@ class Master extends Code {
         button.addEventListener("click", (e) => {
             //cl("zeige // e.target", e.target)
             e.target.obj.toggleVisibility()
-            if (e.target.innerText == "Zeig\nher") {
+            if (e.target.obj.visible) {
                 e.target.innerText = "Ver-\nsteck"
             } else {
                 e.target.innerText = "Zeig\nher"
@@ -129,7 +129,6 @@ class Guess extends Code {  // Whole Row
         button.innerHTML = "Auto Rate"
         button.addEventListener("click", (e) => {
             e.target.obj.autoGuess()
-
         })
         this.domObj.appendChild(button)
 
