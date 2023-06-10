@@ -38,7 +38,7 @@ class Color {
         this.domObj.addEventListener("click", (e) => { e.target.obj.rotate() })
     }
 
-    updateDisplay(visible) {
+    updateDisplay(visible = true) {
         this.visible = visible
         // cl("update", this, visible)
         if (visible) {
@@ -48,9 +48,15 @@ class Color {
         }
     }
 
+    setInt(i) {
+        this.currentValue = i;
+        this.updateDisplay(true)
+        this.isUpdated = true
+    }
+
     randomize() {
         this.currentValue = Math.floor(Math.random() * 6)
-        this.updateDisplay()
+        this.updateDisplay(false)
         this.isUpdated = true
     }
 
