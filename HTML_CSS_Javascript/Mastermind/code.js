@@ -108,7 +108,11 @@ class Guess extends Code {  // Whole Row
     possibilitiesInherited = null // array
     constructor(parent, possibilities) {  // TODO Master verankern für Bewertung
         super(parent)
-        parent.notify(`Neuer Versuch, ${possibilities.length} gültige Möglichkeiten`)
+        if (possibilities.length == 1) {
+            parent.notify("Ich kenne die richtige Lösung ;)")
+        } else {
+            parent.notify(`Neuer Versuch, ${possibilities.length} gültige Möglichkeiten`)
+        }
         this.possibilitiesInherited = possibilities
         // Bewerte - Button
         let button = document.createElement("button")
