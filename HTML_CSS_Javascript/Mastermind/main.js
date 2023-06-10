@@ -16,9 +16,9 @@ class Main {
 
     newGame() {
         this.initMaster()
-        this.initGuesses()
         this.domNotifyBox.value = ""
         this.notify("Neues Spiel gestartet")
+        this.initGuesses()
     }
 
     initGuesses() {
@@ -36,7 +36,8 @@ class Main {
     }
 
     prependGuess() {
-        this.guesses.push(new Guess(this))
+        let guess = new Guess(this, this.guesses[this.guesses.length - 1].getPossibilities())
+        this.guesses.push(guess)
         this.domGuessesField.prepend(this.guesses[this.guesses.length - 1].domObj)
     }
 
