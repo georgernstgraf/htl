@@ -262,9 +262,11 @@ class Guess extends Code {  // Whole Row
             }
             dict.get(div).push(arr[i])
         }
+        console.log(dict)
         let keys = Array.from(dict.keys()).sort()
         return dict.get(keys.pop())
     }
+
     getDiversity(arr) {
         let symbols = []
         for (let i = 0; i < arr.length; i++) {
@@ -275,6 +277,7 @@ class Guess extends Code {  // Whole Row
         return symbols.length
     }
 }
+
 
 class BewertePeg {
     parent = null
