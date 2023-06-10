@@ -7,7 +7,7 @@ div {
 
 button {
     align-self: normal;
-    border-radius: 15%;
+    border-radius: inherit;
     border: solid #999 0.2rem;
     margin: 5%;
     font-size: 1rem;
@@ -38,6 +38,8 @@ button {
     background-color: #f00;
     color: #fff;
     text-align: center;
+    margin: 7px;
+    border-radius: inherit;
 }
 
 .bewerte {
@@ -112,13 +114,19 @@ button {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: lightgray;
+    background-color: darkgrey;
+    background-image: url("mastermindimage.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
 }
 
-h1 {
+h1,
+h2 {
     text-align: center;
     color: white;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 6px 6px 12px black;
 }
 
 p {

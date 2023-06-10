@@ -104,9 +104,11 @@ class Master extends Code {
 
 class Guess extends Code {  // Whole Row
     bewertePegs = []
+    bewertung = null
     possibilitiesInherited = null // array
     constructor(parent, possibilities) {  // TODO Master verankern für Bewertung
         super(parent)
+        parent.notify(`Neuer Versuch, ${possibilities.length} gültige Möglichkeiten`)
         this.possibilitiesInherited = possibilities
         // Bewerte - Button
         let button = document.createElement("button")
@@ -114,7 +116,7 @@ class Guess extends Code {  // Whole Row
         button.classList.add("bewerte")
         button.innerText = "Bewerten"
         button.addEventListener("click", (e) => {
-            cl("e.target", e.target)
+            //cl("e.target", e.target)
             e.target.obj.bewerte()
         })
         this.domObj.appendChild(button)
@@ -146,7 +148,7 @@ class Guess extends Code {  // Whole Row
     }
 
     bewerte(master = null) {
-        let rw, guessArray, bewCount
+        let bewCount
         if (!this.isComplete()) {
             this.parent.notify("Code ist nicht fertig, kann nicht bewerten")
             return
@@ -154,17 +156,17 @@ class Guess extends Code {  // Whole Row
         if (master == null) {
             master = this.parent.master.getPrimitive()
         }
-        guessArray = this.getPrimitive()
-        this.parent.notify(`master: ${master}`)
-        this.parent.notify(`guessA: ${guessArray}`)
-        rw = this.getBewertung(master, guessArray)
-        this.parent.notify(`Bewertung: ${rw[0]} schwarze und ${rw[1]} weisse`)
+        this.bewertung = this.getPrimitive()
+        // this.parent.notify(`master: ${master}`)
+        // this.parent.notify(`guessA: ${this.bewertung}`)
+        this.bewertung = this.getBewertung(master, this.bewertung)
+        this.parent.notify(`Bewertung: ${this.bewertung[0]} schwarze und ${this.bewertung[1]} weisse`)
         bewCount = 1
-        for (let i = 0; i < rw[0]; i++) {
+        for (let i = 0; i < this.bewertung[0]; i++) {
             this.domObj.getElementsByClassName(`b${bewCount}`)[0].style.backgroundColor = "#000"
             bewCount++
         }
-        for (let i = 0; i < rw[1]; i++) {
+        for (let i = 0; i < this.bewertung[1]; i++) {
             this.domObj.getElementsByClassName(`b${bewCount}`)[0].style.backgroundColor = "#fff"
             bewCount++
         }
@@ -172,10 +174,10 @@ class Guess extends Code {  // Whole Row
             this.domObj.getElementsByClassName(`b${bewCount}`)[0].style.backgroundColor = "#888"
         }
         if (!this.isBewerted) {
-            if (rw[0] < 4) {
-                this.parent.prependGuess() // TODO
+            if (this.bewertung[0] < 4) {
+                this.parent.prependGuess()
             } else {
-                this.parent.prependWin()  // TODO
+                this.parent.prependWin()
             }
         } else {
             this.parent.notify("Ist schon bewertet!")
@@ -183,7 +185,32 @@ class Guess extends Code {  // Whole Row
         this.isBewerted = true
     }
 
-    getBewertung(master, guess) { // master & guess are int[4], return int[2]
+    getPossibilities() {
+        let rw = []
+        let primitivThis = this.getPrimitive()
+        for (let poss of this.possibilitiesInherited) {
+            if (this.arraysEqual(this.getBewertung(poss, primitivThis), this.bewertung)) {
+                rw.push(poss)
+            }
+        }
+        return rw
+    }
+
+    arraysEqual(one, two) {
+        if (one.length != two.length) {
+            return false
+        }
+        for (let i = 0; i < one.length; i++) {
+            if (one[i] != two[i]) {
+                return false
+            }
+        }
+        return true
+    }
+
+    getBewertung(parMaster, parGuess) { // master & guess are int[4], return int[2]
+        let master = Array.from(parMaster)
+        let guess = Array.from(parGuess)
         let schwarze = 0, weisse = 0
         // Erst die Anzahl der schwarzen berechnen und sowohl Vorgabe als auch Versuch auf undefined setzen
         for (let i = 0; i < guess.length; i++) {
