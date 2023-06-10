@@ -126,7 +126,13 @@ h1,
 h2 {
     text-align: center;
     color: white;
-    text-shadow: 6px 6px 12px black;
+    background-color: #999;
+    outline: 2px solid black;
+    margin: 10px;
+}
+
+#master {
+    background-color: darkblue;
 }
 
 p {
