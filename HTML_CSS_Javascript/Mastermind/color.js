@@ -1,8 +1,6 @@
 "use strict"
 
 // Klasse für EINEN STECKER (PEG)
-
-
 class Color {
 
     obj = undefined
@@ -72,5 +70,4 @@ class Color {
         }
         this.updateDisplay(true)
     }
-
 }

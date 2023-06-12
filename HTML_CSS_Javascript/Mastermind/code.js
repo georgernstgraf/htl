@@ -258,8 +258,8 @@ class Guess extends Code {  // Whole Row
             }
             dict.get(div).push(arr[i])
         }
-        // console.log(dict)
-        return dict.getFullestArray()
+        return dict.getMostDiverseArray()
+        // return dict.getFullestArray()
     }
 
     getDiversity(arr) {
