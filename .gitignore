@@ -1,1 +1,5 @@
 htl.code-workspace
+.vs/
+.vscode/
+obj/
+*.pdf

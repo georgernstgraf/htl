@@ -1,0 +1,117 @@
+Wieviel Byte sind `(3 Tebibyte - 1000 Gibibyte)`? (3 P.)
+10 Pbit/s sind wieviele Gbit/s? (2 P.)
+Gegeben ist folgende Binärzahl: `"10011101"`. Stellen Sie diese Zahl in dezimaler sowie in hexadezimaler Schreibweise dar! (3 P.)
+Wie heißen die 7 Schichten des OSI Modelles und was bedeuten sie? (3 P.)
+Erklären Sie den Begriff simplex! (2 P.)
+Erklären Sie den Begriff halbduplex (2 P.)
+Erklären Sie den Begriff volldumplex (2 P.)
+Erklären Sie den Begriff multiplex! (3 P.)
+In welcher Einheit wird die Bandbreite einer Datenleitung gemessen? (2 P.)
+Welche physischen Medien kennen sie? (3 P.)
+Nennen Sie ungefähre Übertragungs-Reichweiten für kabelgebundene Netzwerke! (1 P.)
+Nennen Sie ungefähre Übertragungs-Reichweiten für Funknetze! (1 P.)
+Nennen Sie ungefähre Übertragungs-Reichweiten für Glasfaser Datenleitungen! (1 P.)
+Welches Trägermaterial ermöglicht auf eine Distanz von 1km 10Pbit/s (Peta-Bit pro Sekunde)? (1 P.)
+Nennen Sie ungefähre Übertragungs-Reichweiten für Richtfunkverbindungen. (1 P.)
+Was bedeutet die "MAC" Adressse? (2 P.)
+Wieviele Bytes hat eine Ethernet Adresse? (1 P.)
+Was ist der Unterschied zwischen einer MAC Adresse und einer Ethernet Adresse? (1 P.)
+Wie viele Hexadezimalzahlen benötigt man, um eine MAC Adresse darzustellen? (2 P.)
+Ist anhand einer MAC Adresse die Herstellerfirma der Netzwerkkarte feststellbar? (2 P.)
+Wie kann anhand einer MAC Adresse die Herstellerfirma der Netzwerkkarte ausfindig gemacht werden? (2 P.)
+Nennen Sie vier verschiedene Hardware Netzwerkkomponenten. (4 P.)
+Erklären Sie die Aufgabe und Funktionsweise einer Netzwerk "Bridge". (3 P.)
+Erklären Sie die Aufgabe und Funktionsweise eines Hubs. (3 P.)
+Erklären Sie die Aufgabe und Funktionsweise eines Switches. (3 P.)
+Erklären Sie die Aufgabe und Funktionsweise eines Routers. (3 P.)
+Gibt es in einem WLAN ebenfalls Ethernet Adressen? (1 P.)
+Welche Technologie löst in heutigen kabelgebundenen Netzwerken das Problem von Signalkollisionen? (2 P.)
+Erklären Sie den Unterschied zwischen einem Switch und einem Router! (3 P.)
+Ab welchem Layer des OSI Modelles können Datenpakete das lokale Netz verlassen? (1 P.)
+Was ist die Aufgabe von Routingprotokollen? (2 P.)
+Wie viele Bytes hat eine IP Adresse? (1 P.)
+Was bedeutet IP? (1 P.)
+Können IP Pakete ein LAN verlassen? (1 P.)
+Können TCP Pakete ein LAN verlassen? (1 P.)
+Was bedeutet TCP? (1 P.)
+Was ist die Besonderheit von TCP gegenüber "reinem Layer 3"? (2 P.)
+Auf welcher Schichte des OSI Modelles ist TCP angesiedelt? (2 P.)
+aus wievielen bytes besteht eine IP Adresse? (1 P.)
+Was ist ein IP Subnetz? (3 P.)
+Was ist eine IP Subnetzmaske und welche Schreibweisen dieser Maske kennen Sie? (3 P.)
+Erklären Sie die Begriffe Class A, Class B, Class C (3 P.)
+Wie lautet eine alternative Schreibweise für die Subnetmask `/24`? (1 P.)
+Wie lautet eine alternative Schreibweise für die Subnetmask `255.255.0.0`? (1 P.)
+Was ist die Aufgabe des "default gateways"? (2 P.)
+Gegeben ist das Netz 10.0.0.0/8:
+Gegeben ist das Netz 192.168.23.0/24:
+Gegeben ist das Netz 78.41.112.0 - 78.41.112.255:
+Ein PC hat folgende Netzwerk Konfiguration:
+`inet 10.92.51.185 netmask 255.255.0.0`.
+Was bedeutet DHCP? (1 P.)
+welche Probleme löst DHCP? (2 P.)
+Welche Informationen teilt ein DHCP Server dem Client mit? maximal erreichbar (5 P.)
+Was bedeutet das Kürzel DNS?
+Was heißt DNS und was wird dadurch möglich? (2 P.)
+Was ist der Unterschied zwischen einem "autoritativen" und einem "rekursiven" DNS-Server?
+Beim Verbinden Ihres Handys mit einem WLAN kriegt es u.A. die IP-Adresse eines DNS-Servers. Ist dieser *rekursiv* oder *autoritativ*?  
+Was versteht man unter einem DNS-Root-Server?  
+Ist ein DNS-Root-Server *rekursiv* oder *autoritativ*?  
+Erklären Sie, warum man DNS als eine *hierarchische Datenbank* bezeichnet!
+Was bedeutet das Kürzel TLD?
+Was verstehen Sie unter dem Begiff "Delegation" im Zusammenhang mit DNS?
+Auf welchem Standard-Port ist das DNS-Service erreichbar?  
+Welche Informationen können mittels "whois" abgefragt werden? (4 P.)
+Was bedeutet das Kürzel "AS" und was bedeutet es? (2 P.)
+Welche Organsiation verwaltet die Vergabe von IP-Ranges (Subnets) in Europa? (1 P.)
+Ein Land beschließt, keine Sommerzeit mehr zu machen. Welche Organisation muß die Verwaltung dieses Landes informieren? (1 P.)
+Welche Organisation verwaltet Standard-Portnummern?
+Was bedeutet das Kürzel IANA?
+Welche Organisation betreut die Internet RFC's?
+Was sind Internet RFC's?
+Wofür steht NTP?
+Wofür steht UTC?
+Welche Ports werden von NTP verwendet
+Was bedeutet "Stratum" im Zusammenhang mit NTP?
+Ist ein niedrieger oder ein hoher Stratum-Wert Anzeichen einer sehr guten Zeitquelle?
+Was ist eine Zeitquelle und welche kennen Sie?
+NTP ermöglicht eine Genauigkeit von welcher Größenordnung typischerweise für Endgeräte? (Minuten, Sekunden, ms (Millisekunden), µs (Mikrosekunden) ns (Nanosekunden))
+Wie viele Millisekunden hat eine Sekunde?
+Wie viele Millisekunden hat eine Minute?
+Wie viele Mikrosekunden hat eine Sekunde?
+Wie viele Nanosekunden hat eine Millisekunde?
+Wie wird die Umstellung von Winterzeit auf Sommerzeit in NTP durchgeführt?
+Gibt es in der NTP-Zeit Sommerzeit, Winterzeit, und Schaltjahre?
+Gibt es in der NTP-Zeit *Sprünge*? Und falls ja, welche?
+Die NTP-Zeit ist ja im ganzen Internet überall die gleiche. Wodurch ist es trotzdem möglich, daß unsere Rechner und Handys die europäische Zeit haben, obwohl sie ja mit NTP synchronisiert sind?
+Was versteht man unter einem Socket? Wofür braucht man das?
+Wie viele Sockets werden für eine Netzwerkverbindung benötigt?
+Was versteht man unter einem *socketpair*? Begründen Sie Ihre Antwort!
+Was verstehen Sie beim Thema IP unter einem *Port*? Erläutern Sie!
+Wodurch unterscheiden sich UDP und TCP im Wesentlichen?
+Wie lautet die größtmögliche IP-Port-Nummer?
+Was kann man mit dem Programm *wireshark* machen?
+Nennen Sie zwei typische Problemstellungen, für welche VPN eine Lösung ist.
+Was wird in RFC 1918 festgelegt?
+Wofür seht das Kürzel NAT?
+Erklären Sie in einigen Sätzen die Funktionsweise von NAT
+Was versteht man unter "reverse NAT"? Erklären Sie in eigenen Worten!
+Was bedeutet Authentisierung?
+Was ist die so genannte Two-Factor Authentisierung?
+Was bedeutet Autorisierung?
+Wodurch unterscheidet sich symmetrische von asymmetrischer Kryptographie?
+Welches Problem löst das Diffie-Helman Verfahren?
+Ist das Diffie-Helman Verfahren der symmetrischen oder asymmetrischen Kryptographie zuzuordnen?
+Welche Informationen sind in Digitalen Zertifikaten enthalten?
+Welche besondere Eigenschaft hat ein Root-Zertifikat? (Stammzertifikat)
+Kann ein Zertifikat abgelaufen sein (also nicht mehr gültig)?
+Unter welchen Umständen ist ein nicht abgelaufenes Zertifikat ungültig?
+Was ist eine Certificate Chain?
+Was ist ein Hash-Algorithmus?
+Was versteht man unter einer CA?
+Welche Aufgaben hat eine CA?
+Woher kann man ein digitales Zertifikat bekommen?
+Wie heißt das wichtigste Opensource-Werkzeug rund um das Thema Kryptographie?  
+Könnte man theoretisch mit openssl eine Certificate Authority selber bauen?
+Was versteht man unter dem Terminus "security by obscurity"?  
+Was besagt das Kerckhoff'sche Prinzip?

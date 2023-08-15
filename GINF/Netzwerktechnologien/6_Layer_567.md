@@ -13,7 +13,7 @@ Andere Benennungen:
 - Kommunikationssteuerungsschicht
 
 Kommunikation zwischen zwei Systemen wird organisiert. Eine Session ist z.b. eine Videokonferenz. z.B. die Synchronisation zwischen
-Gesicht und Lippen ist ein "Service" des Layer 5. Man kann "wiedereinsteigen". Ebenso kann man Browser-Cookies oder Session-ID's als Elemente des Layer 5 betrachten.
+Gesicht und Lippen (separate Audio- und Videostreams) ist ein "Service" des Layer 5. Man kann "wiedereinsteigen". Ebenso kann man Browser-Cookies oder Session-ID's als Elemente des Layer 5 betrachten.
 
 ### Weitere Services im Layer 5
 
@@ -29,6 +29,8 @@ Wie bekommt die Applikation (L7) die Daten zu sehen, wie werden sie präsentiert
 - Zeichensatzes, aber auch der
 - Verschlüsselung und
 - Komprimierung
+  - lossless
+  - lossy 
 
 des Datenstroms gehören hier dazu.
 
@@ -49,6 +51,6 @@ Jedoch auch Applikationen die unsichtbar sind ("headless").
 
 ### Themen zur Vertiefung, Auswahl
 
-- Crypto (Zertifikate!!), Authorities, Überprüfung, ...
+- Crypto (Zertifikate!!), Authorities, Überprüfung, ... siehe Dokument Sicherheit
 - VPN
 - Mail-Routing
