@@ -3,3 +3,5 @@ htl.code-workspace
 .vscode/
 obj/
 *.pdf
+node_modules
+.env
