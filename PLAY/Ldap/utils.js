@@ -1,7 +1,4 @@
 const ldap = require("ldapjs");
-const client = ldap.createClient({
-    url: "ldaps://ldap.spengergasse.at",
-});
 
 function getDN(cn) {
     if (cn == undefined || !cn.startsWith("l_")) {
@@ -13,9 +10,10 @@ function getDN(cn) {
 }
 function tryBind(user, pass, cb) {
     console.log(`Trying BIND with CREDS: ${user} / ${pass}`);
+    const client = ldap.createClient({
+        url: "ldaps://ldap.spengergasse.at",
+    });
     client.bind(user, pass, (err) => {
-        // console.log("MY MY MY", err); // null bzw. LDAPError
-        // console.log("HE HE HE", res); // BindResponse bzw. undefined
         console.log(`RESULT OF BIND with CREDS: ${user} / ${pass}`);
         client.unbind();
         if (err == null) cb(true);
