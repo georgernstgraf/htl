@@ -5,3 +5,4 @@ obj/
 *.pdf
 node_modules
 .env
+logintest.rest

@@ -1,21 +1,7 @@
-const utils = require("./utils.js");
-require("dotenv").config();
+const express = require("express");
+const app = express();
+app.use(express.json());
 
-const grafgsec = process.env.grg_tok;
-const grafDN = utils.getDN(process.env.grg_uid);
-
-const urxnsec = process.env.urxn_tok;
-const urxnDN = utils.getDN("e_urxn");
-// console.log(`try: ${grafDN} with ${secret}`);
-function cb(user, res) {
-    for (let i = 0; i < arguments.length; i++) {
-        console.log(`${i}: `, arguments[i]);
-    }
-    if (res) {
-        console.log("HURRA");
-    } else {
-        console.log("OJE");
-    }
-}
-utils.tryBind(urxnDN, urxnsec, cb.bind(null, urxnDN));
-utils.tryBind(grafDN, grafgsec, cb.bind(null, grafDN));
+const loginRouter = require("./routes/login");
+app.use("/login", loginRouter);
+app.listen(3000, "schurlibua", (msg) => console.log(msg));
