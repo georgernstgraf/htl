@@ -6,3 +6,5 @@ obj/
 node_modules
 .env
 logintest.rest
+*.db
+*.db-journal
