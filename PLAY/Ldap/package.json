@@ -12,6 +12,8 @@
     "dependencies": {
         "dotenv": "^16.3.1",
         "express": "^4.18.2",
-        "ldapjs": "^3.0.5"
+        "jsonwebtoken": "^9.0.2",
+        "ldapjs": "^3.0.5",
+        "ms": "^2.1.3"
     }
 }
