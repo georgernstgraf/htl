@@ -1,0 +1,8 @@
+/* always display first line */
+
+article > p {
+    text-decoration: line-through;
+}
+article:focus {
+    background-color: red;
+}

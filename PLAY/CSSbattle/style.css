@@ -1,0 +1,16 @@
+div {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    transition: background-color 3s, width 3s, height 3s, rotate 3s;
+    border: 3px solid green;
+    margin: 70px auto;
+    left: 50px;
+    border-radius: 25px;
+}
+div:hover {
+    background-color: red;
+    rotate: 360deg;
+    width: 300px;
+    height: 300px;
+}
