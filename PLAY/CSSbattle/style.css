@@ -10,7 +10,7 @@ div {
 }
 div:hover {
     background-color: red;
-    rotate: 360deg;
+    rotate: 3600deg;
     width: 300px;
     height: 300px;
 }
