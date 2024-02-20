@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" type="module"></script>
+</head>
+
+<body>
+    <input type="text" name="q" data-hx-get="/trigger_delay" data-hx-trigger="keyup changed delay:500ms"
+        data-hx-target="#search-results" placeholder="Search...">
+    <div id="search-results"></div>
+    <div data-hx-get="/clicked" data-hx-trigger="click[ctrlKey]">
+        Control Click Me
+    </div>
+    <div data-hx-get="/news" data-hx-trigger="every 2s"></div>
+</body>
+
+</html>
