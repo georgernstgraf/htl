@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="sortable-list">
+        <li>Item 3</li>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <button onclick="sortList()">Sort List</button>
+    <script>
+        function sortList() {
+            const list = document.getElementById('sortable-list');
+            Array.from(list.getElementsByTagName("LI"))
+                .sort((a, b) => a.textContent.localeCompare(b.textContent))
+                .forEach(li => list.appendChild(li));
+        };
+    </script>
+</body>
+
+</html>
